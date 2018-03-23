@@ -29,7 +29,7 @@ var skillSlides = [
 
     '<i class="fas fa-desktop fa-4x"></i> <i class="fas fa-mobile-alt fa-2x"></i><br><p class="skill-text">Responsive layouts automatically adjust to look great on any screen size, from mobile devices to desktop monitors.</p>',
 
-    '<i class="fas fa-thumbs-up fa-4x"></i><br><p class="skill-text">Elegant design and seamless functionality provides users with a positive web-viewing experience.</p>',
+    '<i class="fas fa-thumbs-up fa-4x"></i><br><p class="skill-text">Effective designs and seamless functionality provides users with a positive web-viewing experience.</p>',
 
     '<i class="fas fa-code fa-4x"></i><br><p class="skill-text">Well-documented and readable code means that it can be easily maintained by any developer, which helps to ensure that your website always stays up-to-date.</p>'
 ];
