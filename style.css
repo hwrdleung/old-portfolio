@@ -6,6 +6,11 @@ body {
     padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
 /* CLASSES */
 .view {
     height: 100vh;
@@ -18,8 +23,16 @@ body {
     background: #000;
 }
 
+.yellow-text {
+    color: yellow;
+}
+
+.orange-text {
+    color: orange;
+}
+
 .hide {
-    display: none;
+    top: -100vh;
 }
 
 /* FOR TESTING */
@@ -31,7 +44,6 @@ body {
     background: green;    
 }
 
-
 /* FLOATING NAV BUTTON */
 #floating-nav-btn {
     height: 100px;
@@ -40,25 +52,46 @@ body {
     border-radius: 50%;
     color: #FFF;
     background: #000;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     outline: none;
+    text-align: center;
     
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 20;
+    transition: transform 0.5s;
 }
 
 #floating-nav-btn:hover {
-    background: gray;
+    background: lightblue;
 }
 
 /* ABOUT VIEW */
+#about-right {
+    text-align: center;
+    padding: 20px 20px 100px 20px;
+    background: rgb(24, 24, 24);
+}
 
-#about-view{
+#profile-pic {
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+#about-welcome-msg {
+    line-height: 2;
+    letter-spacing: 0.2rem;
+    color: yellow;
+    font-size: 1.2rem;
+}
+
+#about-view {
     z-index: 1;
     display: grid;
     grid-template-columns: 1fr 300px;
@@ -73,17 +106,113 @@ body {
 .about-square {
     width: 100%;
     height: 100%;
-    border: 1px #FFF solid;
     box-sizing: border-box;
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* WEATHER SQUARE */
+#weather-square {
+    background: url('./images/beach02.jpg');
+    background-size: cover;
+    background-position: right;
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 3px 3px 10px black;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px 1fr 1fr;
+    grid-gap: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.date {
+    font-size: 2.5rem;
+    height: 100%;
+}
+
+.clock {
+    font-size: 4rem;
+    text-decoration: none;
+    margin: 0;
+    display: inline-block;
+    padding: 20px;
+}
+
+.location {
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+#hawaii-temp {
+    font-size: 4rem;
+    display: inline-block;
+    padding: 20px;
+}
+
+#contact-square {
+    background: url('./images/computer03.jpg');
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#email-address {
+    border: 0.5rem #FFF solid;
+    padding: 20px 30px;
+    margin: 0 auto;
+    background: rgba(0, 255, 242, 0.5);
+}
+
+/* QUESTIONS/ANSWERS SQUARE */
+#qa-square{
+    font-size: 1.3rem;
+}
+
+
+/* SKILLSET SQUARE */
+#skillset-square {
+    color: #FFF;
+}
+
+.skill-text {
+    font-size: 1.3rem;
+    line-height: 2;
+    padding: 0 25px;
+}
+
+#skillset-square ul {
+    margin: 0;
+    padding: 0;
+}
+
+#skillset-square ul li{
+    list-style-type: none;
+    display: inline-block;
+    border: 1px #FFF solid;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 1.3rem;
+    color: #FFF
 }
 
 #projects-view{
     z-index: 2;
+    transition: top 0.2s;
 }
 
 /* MEDIA QUERIES */
-
-
 @media only screen and (max-width: 900px) {
 
     #floating-nav-btn {
@@ -97,6 +226,12 @@ body {
         flex-wrap: wrap;
         overflow: auto;
         height: 100vh;
+    }
+
+    .about-square {
+        height: auto;
+        max-height: 50%;
+        width: 100%;
     }
   }
 
@@ -124,8 +259,11 @@ body {
         height: auto;
     }
 
-
- 
+    .about-square {
+        height: auto;
+        max-height: 50%;
+        width: 100%;
+    }
   }
 
 
