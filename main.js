@@ -10,9 +10,9 @@ var aboutView = document.querySelector('#about-view');
 var projectsView = document.querySelector('#projects-view');
 var currentView = "about";
 //Clocks
-var localClock = document.querySelector('#local-clock');
+var userClock = document.querySelector('#user-clock');
 var hawaiiClock = document.querySelector('#hawaii-clock');
-var hawaiiTemp = document.querySelector('#hawaii-temp');
+var userLocation = document.querySelector('#user-location');
 //nav-btn
 var floatingNavBtn = document.querySelector('#floating-nav-btn');
 
@@ -29,7 +29,7 @@ var skillSlides = [
 
     '<i class="fas fa-desktop fa-4x"></i> <i class="fas fa-mobile-alt fa-2x"></i><br><p class="skill-text">Responsive layouts automatically adjust to look great on any screen size, from mobile devices to desktop monitors.</p>',
 
-    '<i class="fas fa-thumbs-up fa-4x"></i><br><p class="skill-text">Effective designs and seamless functionality provides users with a positive web-viewing experience.</p>',
+    '<i class="fas fa-thumbs-up fa-4x"></i><br><p class="skill-text">Effective designs with seamless functionality provides users with a positive web-viewing experience.</p>',
 
     '<i class="fas fa-code fa-4x"></i><br><p class="skill-text">Well-documented and readable code means that it can be easily maintained by any developer, which helps to ensure that your website always stays up-to-date.</p>'
 ];
@@ -51,6 +51,68 @@ var RAW_OFFSET_HAWAII = -36000;
 var hawaiiDate = new Date(utc + RAW_OFFSET_HAWAII);
 var hawaiiHours = hawaiiDate.getHours().toString();
 var hawaiiMinutes = hawaiiDate.getMinutes().toString();
+
+getLocation();
+//Get user's city name from lat and long
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(setLocalTime);
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
+}
+
+function setLocalTime(position) {
+    var localLatitude = position.coords.latitude;
+    var localLongitude = position.coords.longitude;
+    console.log(localLatitude, localLongitude);
+    //Calculate user's Local time from lat and long and display to UI
+    var GOOGLE_TIME_ZONE_API_URL = 
+    'https://maps.googleapis.com/maps/api/timezone/json?location='
+     + localLatitude + ','
+     + localLongitude
+     + '&timestamp=1521590400&key='
+     + GOOGLE_TIME_ZONE_API_KEY
+
+    $.getJSON(GOOGLE_TIME_ZONE_API_URL, function(data) {
+        console.log(data);  
+        console.log(data.rawOffset);  
+
+        var localDate = new Date(utc + data.rawOffset);
+        console.log('localDate', localDate);
+        var localHours = localDate.getHours().toString();
+        var localMinutes = localDate.getMinutes().toString();
+
+        //Prepend 0 if length === 1
+        if(localHours.length === 1){
+            localHours = "0" + localHours;
+        }
+        if(localMinutes.length === 1){
+            localMinutes = "0" + localMinutes;
+        }
+
+        var localDisplayTime = localHours + ":" + localMinutes;
+        console.log('localDisplayTime', localDisplayTime);
+        userClock.innerHTML = localDisplayTime;
+   });
+
+   //Get user's city name from lat and long and display to UI
+   var GOOGLE_GEOLOCATION_API_KEY = 'AIzaSyBtsKDAx9hdSnkdC7HyA_yyr3GaBGvf45s';
+   var GOOGLE_GEOLOCATION_API_URL = 'https://maps.googleapis.com/maps/api/geocode/json?latlng='
+   + localLatitude + ','
+   + localLongitude + '&key='
+   + GOOGLE_GEOLOCATION_API_KEY;
+
+   $.getJSON(GOOGLE_GEOLOCATION_API_URL, function(data) {
+
+    var formattedAddress = data.results[3]['formatted_address'];
+    localCity = formattedAddress.split(',')[0];
+    localState = formattedAddress.split(',')[1];
+
+    var location = localCity + ", " + localState;
+    userLocation.innerHTML = location;
+});
+}
 
 //Prepend 0 if length === 1
 if(hawaiiHours.length === 1){
@@ -115,7 +177,7 @@ var qaSquareTimer = setInterval(function(){
 //adding and removingAl the 'hide' class to/from the projects view.
 function switchViews(){
     var aboutDeg = "0deg";
-    var projectsDeg = "90deg";
+    var projectsDeg = "180deg";
 
     if(currentView === "about"){
         projectsView.classList.remove('hide');
@@ -126,4 +188,16 @@ function switchViews(){
         currentView = "about";
         floatingNavBtn.style.transform = "rotate(" + aboutDeg + ")"
     }
+}
+
+// ------------------------------------------------------
+//                     PROJECTS VIEW
+// ------------------------------------------------------
+
+function projectNavLeft(projectName){
+    console.log('projectNavLeft() for ', projectName);
+}
+
+function projectNavRight(projectName){
+    console.log('projectNavRight() for ', projectName);
 }

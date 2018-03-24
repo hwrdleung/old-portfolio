@@ -6,6 +6,7 @@ body {
     padding: 0;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
@@ -33,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .hide {
     top: -100vh;
+}
+
+.debug {
+    border: 1px red solid;
 }
 
 /* FOR TESTING */
@@ -86,7 +91,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #about-welcome-msg {
     line-height: 2;
-    letter-spacing: 0.2rem;
     color: yellow;
     font-size: 1.2rem;
 }
@@ -123,8 +127,8 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
 
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 50px 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3rem 1fr;
     grid-gap: 0;
     justify-content: center;
     align-items: center;
@@ -135,20 +139,65 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
 }
 
-.date {
+#current-date {
     font-size: 2.5rem;
     height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#social-links{
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#social-links li {
+    list-style-type: none;
+    padding: 0 20px;
+    color: #FFF;
+}
+
+#social-links li p {
+    font-size: 0.8rem;
+}
+
+#social-links li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+#social-links li a:hover {
+    color: lightblue;
 }
 
 .clock {
-    font-size: 4rem;
+    font-size: 3rem;
     text-decoration: none;
     margin: 0;
-    display: inline-block;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
 }
 
-.location {
+.clock ul {
+    margin: 0;
+    padding: 0;
+}
+
+.clock ul li {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+#location-marker {
     font-size: 1.3rem;
     margin: 0;
     padding: 0;
@@ -207,9 +256,144 @@ h1, h2, h3, h4, h5, h6 {
     color: #FFF
 }
 
+/* PROJECTS VIEW */
+
 #projects-view{
     z-index: 2;
-    transition: top 0.2s;
+    transition: top 0.5s;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+}
+
+#projects-left {
+    overflow: auto;
+}
+
+.project-section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-section:nth-child(even){
+    background: silver;
+}
+
+.project-container {
+    width: 80%;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.project-body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-img-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-img {
+    height: 100%;
+    width: 100%;
+}
+
+.project-description-container {
+    width: 50%;
+    height: 100%;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.project-nav-btn-conatiner {
+    display: flex;
+    flex-direction: row;
+    border: 1px red solid;
+}
+
+.project-nav-btn {
+    border: 6px #FFF solid;
+    border-radius: 50%;
+    color: #FFF;
+    margin: 20px auto;
+    outline: none;
+}
+
+.project-nav-btn:hover {
+    border: 6px lightblue solid;
+    color: lightblue;
+}
+
+.project-description {
+    padding: 20px;
+    line-height: 1.5;
+}
+
+#projects-right {
+    background: rgb(24, 24, 24);
+    margin: 0;
+    display: flex;
+}
+
+.projects-menu {
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+}
+
+.projects-menu li {
+    list-style-type: none;
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+.projects-menu li a {
+    display: block;
+    padding: 20px 0;
+    width: 100%;
+    text-decoration: none;
+    color: #FFF;
+    margin: 0;
+}
+
+.projects-menu li a:hover {
+    background: orange;
+}
+
+.project-icon-container {
+    padding: 20px;
 }
 
 /* MEDIA QUERIES */
