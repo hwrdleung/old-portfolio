@@ -131,9 +131,10 @@ h1, h2, h3, h4, h5, h6 {
     background: url('./images/beach02.jpg');
     background-size: cover;
     background-position: right;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     text-shadow: 3px 3px 10px black;
     height: auto;
+    min-height: 300px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -224,6 +225,7 @@ h1, h2, h3, h4, h5, h6 {
     background-position: left;
     display: flex;
     flex-direction: column;
+    min-height:300px;
 }
 
 #email-address {
@@ -237,12 +239,14 @@ h1, h2, h3, h4, h5, h6 {
 #qa-square{
     font-size: 1.3rem;
     padding: 0 15%;
+    min-height: 400px;
 }
 
 
 /* SKILLSET SQUARE */
 #skillset-square {
     color: #FFF;
+    min-height: 300px;
 }
 
 .skill-text {
@@ -452,7 +456,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     #about-right {
-        width: 100%;
+        width: 80%;
         height: auto;
     }
 
