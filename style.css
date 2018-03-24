@@ -6,6 +6,15 @@ body {
     padding: 0;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red; 
+}
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -262,6 +271,8 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 2;
     transition: top 0.5s;
     display: grid;
+    border-bottom: 6px red solid;
+    box-sizing: border-box;
     grid-template-columns: 1fr 300px;
 }
 
@@ -277,14 +288,10 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-.project-section:nth-child(even){
-    background: silver;
-}
 
 .project-container {
-    width: 80%;
-    height: 500px;
-
+    max-width: 800px;
+    max-height: 500px;
     display: grid;
     grid-template-rows: 50px 1fr;
     grid-template-columns: 1fr;
@@ -303,9 +310,13 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
 }
 
+.fa-file-code {
+    padding: 15px;
+}
+
 .project-body {
     height: 100%;
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -313,7 +324,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-img-container {
-    width: 50%;
+    width: 400px;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -327,9 +338,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-description-container {
-    width: 50%;
+    width: 400px;
     height: 100%;
-    background: pink;
+    background: rgb(34, 34, 34);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -348,11 +359,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #FFF;
     margin: 20px auto;
     outline: none;
+    background: none;
 }
 
 .project-nav-btn:hover {
-    border: 6px lightblue solid;
-    color: lightblue;
+    border: 6px blue solid;
+    color: blue;
 }
 
 .project-description {
