@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ABOUT VIEW */
 #about-right {
     text-align: center;
-    padding: 20px 20px 100px 20px;
+    padding: 20px 10% 100px 10%;
     background: rgb(24, 24, 24);
 }
 
@@ -236,6 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 /* QUESTIONS/ANSWERS SQUARE */
 #qa-square{
     font-size: 1.3rem;
+    padding: 0 15%;
 }
 
 
@@ -247,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
 .skill-text {
     font-size: 1.3rem;
     line-height: 2;
-    padding: 0 25px;
+    padding: 0 15%;
 }
 
 #skillset-square ul {
