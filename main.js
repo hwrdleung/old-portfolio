@@ -298,6 +298,11 @@ var projectImage;
 var projectDescription;
 var projectMenuTitle;
 
+var circle = '<i class="far fa-circle"></i>';
+var circleFilled = '<i class="fas fa-circle"></i>';
+var slideIndicatorId;
+var slideIndicator;
+
 for(var i=0; i<allProjects.length; i++){
     //set id's for dom elements in projects view
     titleId = '#' + allProjects[i] + '-title';
@@ -320,6 +325,15 @@ for(var i=0; i<allProjects.length; i++){
     menuId = '#' + allProjects[i] + '-menu-title';
     projectMenuTitle = document.querySelector(menuId);
     projectMenuTitle.innerHTML = projects[allProjects[i]].name;
+    //Draw correct number of circles for slide indicator
+    slideIndicatorId = '#' + allProjects[i] + '-slide-indicator';
+    for(var j=0; j<projects[allProjects[i]].descriptions.length; j++){
+        if(j === 0){
+            $(slideIndicatorId).append(circleFilled);
+        }else{
+            $(slideIndicatorId).append(circle);
+        }
+    }
 }
 
 //User clicks left arrow button on a project
@@ -329,6 +343,7 @@ function projectNavLeft(project){
     //Identify DOM Elements to change
     var imgId = '#' + project + '-img';
     var descriptionId = '#' + project + '-description';
+    var slideIndicatorId = '#' + project + '-slide-indicator';
     var projectImg = document.querySelector(imgId);
     var projectDescription = document.querySelector(descriptionId);
 
@@ -339,9 +354,19 @@ function projectNavLeft(project){
     }
 
     //Change dom element to images[currntSlide] and desciptions[currentSlide]
-    var currentSlide = projects[project].currentSlide; //For readability
+    var currentSlide = projects[project].currentSlide; 
     projectImg.src = projects[project].images[currentSlide];
     projectDescription.innerHTML = projects[project].descriptions[currentSlide];
+
+    //Change slide Indicator to match current Slide
+    $(slideIndicatorId).html('');
+    for(var j=0; j<projects[project].descriptions.length; j++){
+        if(j === currentSlide){
+            $(slideIndicatorId).append(circleFilled);
+        }else{
+            $(slideIndicatorId).append(circle);
+        }
+    }
 }
 
 //User clicks right arrow button on a project
@@ -350,6 +375,7 @@ function projectNavRight(project){
     //Identify DOM Elements to change
     var imgId = '#' + project + '-img';
     var descriptionId = '#' + project + '-description';
+    var slideIndicatorId = '#' + project + '-slide-indicator';
     var projectImg = document.querySelector(imgId);
     var projectDescription= document.querySelector(descriptionId);
 
@@ -363,4 +389,14 @@ function projectNavRight(project){
     var currentSlide = projects[project].currentSlide; //For readability
     projectImg.src = projects[project].images[currentSlide];
     projectDescription.innerHTML = projects[project].descriptions[currentSlide];
+
+    //Change slide Indicator to match current Slide
+    $(slideIndicatorId).html('');
+    for(var j=0; j<projects[project].descriptions.length; j++){
+        if(j === currentSlide){
+            $(slideIndicatorId).append(circleFilled);
+        }else{
+            $(slideIndicatorId).append(circle);
+        }
+    }
 }
