@@ -135,16 +135,6 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-#copyright {
-    width: 100%;
-    height: auto;
-    padding: 10px 0;
-    text-align: center;
-    text-decoration: none;
-    background: rgb(34, 34, 34);
-    grid-column-start: 1;
-    grid-column-end:4;
-}
 
 /* WEATHER SQUARE */
 #weather-square {
