@@ -46,6 +46,10 @@ h1, h2, h3, h4, h5, h6 {
     color: yellow;
 }
 
+.red-text {
+    color: red;
+}
+
 .orange-text {
     color: orange;
 }
@@ -103,6 +107,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ABOUT VIEW */
+#about-view {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+}
+
 #about-right {
     text-align: center;
     padding: 20px 10% 100px 10%;
@@ -122,11 +132,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
 }
 
-#about-view {
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 300px;
-}
+
 
 #about-left {
     display: grid;
@@ -381,23 +387,32 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-.project-nav-btn-conatiner {
+.project-nav-btn-container {
     display: flex;
     flex-direction: row;
-    border: 1px red solid;
+    width: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .project-nav-btn {
-    border: 6px #FFF solid;
+    border: 5px #FFF solid;
     border-radius: 50%;
     color: #FFF;
-    margin: 10% auto;
+    margin: 20px 10px;
     outline: none;
     background: none;
+    user-select: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-nav-btn:hover {
-    border: 6px lightblue solid;
+    border: 5px lightblue solid;
     color: lightblue;
 }
 
@@ -462,7 +477,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 900px) {
+/* @media only screen and (max-width: 900px) {
 
     #floating-nav-btn {
         height: 125px;
@@ -514,5 +529,5 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
     }
   }
-
+ */
 
