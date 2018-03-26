@@ -58,6 +58,15 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px red solid;
 }
 
+.loader {
+    animation: rotate 3s infinite;
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
 /* FOR TESTING */
 .red {
     background: red;
