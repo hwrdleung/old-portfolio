@@ -204,7 +204,11 @@ function switchViews(){
 //                     PROJECTS VIEW
 // ------------------------------------------------------
 
-//projects holds all data for all projects to be diplayed to the DOM
+//projects object holds all data for all projects to be diplayed to the DOM
+//Each image index corresponds to its respective descriptions index.  
+//For example: image[0] is the image for descriptions[0].
+//Changing the name here for a project will automatically change the DOM project title and menu title.
+
 var projects = {
     project01:{
         name: 'project01 pomodoro clock',

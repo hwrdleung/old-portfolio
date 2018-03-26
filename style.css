@@ -135,6 +135,17 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
+#copyright {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    background: rgb(34, 34, 34);
+    grid-column-start: 1;
+    grid-column-end:4;
+}
+
 /* WEATHER SQUARE */
 #weather-square {
     background: url('./images/beach02.jpg');
@@ -353,8 +364,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-img {
-    max-height: 100%;
-    max-width: 100%;
+    width: 100%;
 }
 
 .project-description-container {
@@ -365,7 +375,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
 }
 
 .project-nav-btn-conatiner {
@@ -433,6 +442,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     color: #FFF;
     margin:auto;
+    font-size: 1rem;
 }
 
 .fa-folder {
