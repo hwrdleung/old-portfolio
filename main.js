@@ -178,26 +178,185 @@ var qaSquareTimer = setInterval(function(){
 function switchViews(){
     var aboutDeg = "0deg";
     var projectsDeg = "180deg";
+    var aboutView = document.querySelector('#about-view');
 
     if(currentView === "about"){
         projectsView.classList.remove('hide');
         currentView = "projects";
         floatingNavBtn.style.transform = "rotate(" + projectsDeg + ")"
+        var overflowTimer = setTimeout(function(){
+            aboutView.classList.add('no-overflow');
+        }, 500);
+        //make sure this time is the same duration as anim time in css
     }else if(currentView === "projects"){
         projectsView.classList.add('hide');
         currentView = "about";
         floatingNavBtn.style.transform = "rotate(" + aboutDeg + ")"
+        var overflowTimer = setTimeout(function(){
+            aboutView.classList.remove('no-overflow');
+        }, 500);
     }
+
+
 }
 
 // ------------------------------------------------------
 //                     PROJECTS VIEW
 // ------------------------------------------------------
 
-function projectNavLeft(projectName){
-    console.log('projectNavLeft() for ', projectName);
+//projects holds all data for all projects to be diplayed to the DOM
+var projects = {
+    project01:{
+        name: 'project01 pomodoro clock',
+        currentSlide: 0,
+        codepenLink: 'http://www.codepen.io',
+        githubLink: 'http://www.github.com',
+        images: [
+            "https://images.pexels.com/photos/127512/pexels-photo-127512.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/941195/pexels-photo-941195.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?auto=compress&cs=tinysrgb&h=350",
+        ],
+        descriptions: [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eacommodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit ame",
+            "description01 project01",
+            "description02 project01"
+        ]
+    },
+    project02:{
+        name: 'project02 calculator',
+        currentSlide: 0,
+        codepenLink: 'http://www.codepen.io',
+        githubLink: 'http://www.quora.com',
+        images: [
+            "https://images.pexels.com/photos/796620/pexels-photo-796620.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "https://images.pexels.com/photos/126590/pexels-photo-126590.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "https://images.pexels.com/photos/134074/pexels-photo-134074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "https://images.pexels.com/photos/201101/pexels-photo-201101.jpeg?auto=compress&cs=tinysrgb&h=350"
+        ],
+        descriptions: [
+            "description00 project02 aweawdczvnxhjtukfyutjxthdgsr",
+            "description01 project02",
+            "description02 project02",
+            "description03 project02"
+        ]
+    },
+    project03:{
+        name: 'project03 weather app',
+        currentSlide: 0,
+        codepenLink: 'http://www.yahoo.io',
+        githubLink: 'http://www.google.com',
+        images: [
+            "https://images.pexels.com/photos/295047/pexels-photo-295047.png?auto=compress&cs=tinysrgb&h=350",
+            "https://images.pexels.com/photos/925030/pexels-photo-925030.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "https://images.pexels.com/photos/935890/pexels-photo-935890.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "https://images.pexels.com/photos/97905/pexels-photo-97905.jpeg?auto=compress&cs=tinysrgb&h=350"
+        ],
+        descriptions: [
+            "description00 project03 wefghawefawefawef",
+            "description01 project03",
+            "description02 project03",
+            "description03 project03"
+        ]
+    },
+    project04:{
+        name: 'project04 weawefafawefawep',
+        currentSlide: 0,
+        codepenLink: 'http://www.yahoo.io',
+        githubLink: 'http://www.google.com',
+        images: [
+            "https://images.pexels.com/photos/295047/pexels-photo-295047.png?auto=compress&cs=tinysrgb&h=350",
+            "https://images.pexels.com/photos/925030/pexels-photo-925030.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "https://images.pexels.com/photos/935890/pexels-photo-935890.jpeg?auto=compress&cs=tinysrgb&h=350",
+            "https://images.pexels.com/photos/97905/pexels-photo-97905.jpeg?auto=compress&cs=tinysrgb&h=350"
+        ],
+        descriptions: [
+            "description00 project04 awuellfkamvnjbifewu wefghawefawefawef",
+            "description01 project04 awuellfkamvnjbifewu",
+            "description02 project04 awuellfkamvnjbifewu",
+            "description03 project04 awuellfkamvnjbifewu"
+        ]
+    }
 }
 
-function projectNavRight(projectName){
-    console.log('projectNavRight() for ', projectName);
+//Initialize all projects to display:
+//Projectname, its first image, and its first desciption.
+var allProjects = Object.keys(projects);
+console.log('allProjects', allProjects);
+
+var titleId;
+var imageId;
+var descriptionId;
+var githubId;
+var codepenId;
+var menuId;
+var projectTitle;
+var projectImage;
+var projectDescription;
+var projectMenuTitle;
+
+for(var i=0; i<allProjects.length; i++){
+    //set id's for dom elements in projects view
+    titleId = '#' + allProjects[i] + '-title';
+    imageId = '#' + allProjects[i] + '-img';
+    descriptionId = '#' + allProjects[i] + '-description';
+    githubId = '#' + allProjects[i] + '-github';
+    codepenId = '#' + allProjects[i] + '-codepen';
+    projectTitle = document.querySelector(titleId);
+    projectImage = document.querySelector(imageId);
+    projectDescription = document.querySelector(descriptionId);
+    projectGithub = document.querySelector(githubId);
+    projectCodepen = document.querySelector(codepenId);
+    //Set all project DOM elements to first slide
+    projectTitle.innerHTML = projects[allProjects[i]].name;
+    projectImage.src = projects[allProjects[i]].images[0];
+    projectDescription.innerHTML = projects[allProjects[i]].descriptions[0];
+    projectGithub.href = projects[allProjects[i]].githubLink;
+    projectCodepen.href = projects[allProjects[i]].codepenLink;
+    //Set project names for the right nav menu
+    menuId = '#' + allProjects[i] + '-menu-title';
+    projectMenuTitle = document.querySelector(menuId);
+    projectMenuTitle.innerHTML = projects[allProjects[i]].name;
+}
+
+//User clicks left arrow button on a project
+function projectNavLeft(project){
+    console.log('projectNavLeft() for ', project);
+
+    //Identify DOM Elements to change
+    var imgId = '#' + project + '-img';
+    var descriptionId = '#' + project + '-description';
+    var projectImg = document.querySelector(imgId);
+    var projectDescription = document.querySelector(descriptionId);
+
+    //Set currentSlide to correct index
+    projects[project].currentSlide--;
+    if(projects[project].currentSlide < 0){
+        projects[project].currentSlide = projects[project].descriptions.length-1;
+    }
+
+    //Change dom element to images[currntSlide] and desciptions[currentSlide]
+    var currentSlide = projects[project].currentSlide; //For readability
+    projectImg.src = projects[project].images[currentSlide];
+    projectDescription.innerHTML = projects[project].descriptions[currentSlide];
+}
+
+//User clicks right arrow button on a project
+function projectNavRight(project){
+    console.log('projectNavRight() for ', project);
+    //Identify DOM Elements to change
+    var imgId = '#' + project + '-img';
+    var descriptionId = '#' + project + '-description';
+    var projectImg = document.querySelector(imgId);
+    var projectDescription= document.querySelector(descriptionId);
+
+    //Set currentSlide to correct index
+    projects[project].currentSlide++;
+    if(projects[project].currentSlide > projects[project].descriptions.length-1){
+        projects[project].currentSlide = 0;
+    }
+
+    //Change dom element to images[currntSlide] and desciptions[currentSlide]
+    var currentSlide = projects[project].currentSlide; //For readability
+    projectImg.src = projects[project].images[currentSlide];
+    projectDescription.innerHTML = projects[project].descriptions[currentSlide];
 }

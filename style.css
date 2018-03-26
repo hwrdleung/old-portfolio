@@ -11,6 +11,11 @@ body {
     width: 6px;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(24, 24, 24); 
+}
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: red; 
@@ -31,6 +36,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #FFF;
     text-align: center;
     background: #000;
+}
+
+.no-overflow {
+    overflow: hidden;
 }
 
 .yellow-text {
@@ -81,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #floating-nav-btn:hover {
-    background: lightblue;
+    background: rgb(255, 0, 0);
 }
 
 /* ABOUT VIEW */
@@ -290,19 +299,21 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 25px 0;
 }
 
 
 .project-container {
-    max-width: 80%;
-    max-height: 500px;
+    width: 100%;
+    height: auto;
     display: grid;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
     align-items: center;
+    /* background: red; */
 }
 
 .project-title {
@@ -315,6 +326,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
 }
 
+.fa-cogs,
 .fa-file-code {
     padding: 15px;
 }
@@ -323,14 +335,17 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     width: auto;
     display: flex;
+    background: rgb(34, 34, 34);
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .project-img-container {
     width: 50%;
-    height: 100%;
+    min-width: 400px;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -338,18 +353,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-img {
-    height: 100%;
-    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .project-description-container {
     width: 50%;
-    height: 100%;
-    background: rgb(34, 34, 34);
+    min-width: 400px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
 }
 
 .project-nav-btn-conatiner {
@@ -362,50 +378,68 @@ h1, h2, h3, h4, h5, h6 {
     border: 6px #FFF solid;
     border-radius: 50%;
     color: #FFF;
-    margin: 20px auto;
+    margin: 10% auto;
     outline: none;
     background: none;
 }
 
 .project-nav-btn:hover {
-    border: 6px blue solid;
-    color: blue;
+    border: 6px lightblue solid;
+    color: lightblue;
 }
 
 .project-description {
-    padding: 20px;
+    padding: 1rem;
     line-height: 1.5;
 }
+
+.project-link {
+    color: #FFF;
+    padding: 10px;
+}
+
+.project-link:hover {
+    color: lightblue;
+}
+
+ /* PROJECT VIEW RIGHT VERTICAL NAV BAR */
 
 #projects-right {
     background: rgb(24, 24, 24);
     margin: 0;
     display: flex;
+    flex-direction: column;
+    padding-top: 20px;
 }
 
-.projects-menu {
+.nav-menu {
     width: 100%;
     margin: 0; 
     padding: 0;
 }
 
-.projects-menu li {
+.nav-menu li {
     list-style-type: none;
     width: 100%;
     display: block;
     margin: 0;
+    text-align: left;
 }
 
-.projects-menu li a {
+.nav-menu li a {
     display: block;
     padding: 20px 0;
     width: 100%;
     text-decoration: none;
     color: #FFF;
-    margin: 0;
+    margin:auto;
 }
 
-.projects-menu li a:hover {
+.fa-folder {
+    margin-left: 20px;
+}
+
+.nav-menu li a:hover {
     background: orange;
 }
 

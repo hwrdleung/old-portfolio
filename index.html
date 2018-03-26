@@ -99,24 +99,59 @@
     </div>
 
     <!-- PROJECTS VIEW -->
+<!-- 
+    INSTRUCTIONS FOR ADDING NEW PROJECTS TO THE PROJECTS VIEW: 
+    1.  Add a new "section" to projects-left (main content)
+    2.  Add a new list item to project-menu (nav menu)
+    3.  In main.js, add a new project to the projects object. -->
+
     <div class="view hide" id="projects-view">
         <div id="projects-left">
 
 
             <section class="project-section" id="project01">
-                    PROJECT 01
-                             </section>
+                <div id="project01-container" class="project-container">
+                    <div class="project-title">
+                        <i class="fas fa-cogs"></i>
+                        <span id="project01-title">PROJECT 01</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-img-container">
+                            <img id="project01-img" class="project-img" src="./images/square-placeholder.jpg">
+                        </div>
+                        <div class="project-description-container">
+                            <div class="project-nav-btn-container">
+                                <button onclick="projectNavLeft('project01')" class="project-nav-btn">
+                                    <i class="fas fa-arrow-left fa-3x"></i>
+                                </button>
+                                <button onclick="projectNavRight('project01')" class="project-nav-btn">
+                                    <i class="fas fa-arrow-right fa-3x"></i>
+                                </button>
+                            </div>
+                            <div id="project01-description" class="project-description">
+                                <!-- DESCRIPTION HERE -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-icon-container">
+                        <a id="project01-github" class="project-link" href="#" target="_blank" title="View source code in Github">
+                            <i class="fab fa-github fa-3x"></i></a>
+                        <a id="project01-codepen" class="project-link" href="#" target="_blank" title="View full project in Codepen">
+                            <i class="fab fa-codepen fa-3x"></i></a>
+                    </div>
+                </div>
+            </section>
 
 
             <section class="project-section" id="project02">
-                    <div class="project-container">
+                    <div id="project02-container" class="project-container">
                         <div class="project-title">
-                            <i class="fas fa-file-code"></i>
-                            PROJECT 02
+                            <i class="fas fa-cogs"></i>
+                            <span id="project02-title">PROJECT 02</span>
                         </div>
                         <div class="project-body">
                             <div class="project-img-container">
-                                <img class="project-img" src="./images/square-placeholder.jpg">
+                                <img id="project02-img" class="project-img" src="./images/square-placeholder.jpg">
                             </div>
                             <div class="project-description-container">
                                 <div class="project-nav-btn-container">
@@ -127,93 +162,122 @@
                                         <i class="fas fa-arrow-right fa-3x"></i>
                                     </button>
                                 </div>
-                                <div class="project-description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia deserunt mollit anim id est laborum
+                                <div id="project02-description" class="project-description">
+                                 <!-- DESCRIPTION HERE -->
                                 </div>
     
                             </div>
                         </div>
                         <div class="project-icon-container">
-                            <a href="#" target="_blank">
-                                <i class="fab fa-github fa-3x"></i>
-                            </a>
-                            <a href="#" target="_blank">
-                                <i class="fab fa-codepen fa-3x"></i>
-                            </a>
+                            <a id="project02-github" class="project-link" href="#" target="_blank" title="View source code in Github">
+                                <i class="fab fa-github fa-3x"></i></a>
+                            <a id="project02-codepen" class="project-link" href="#" target="_blank" title="View full project in Codepen">
+                                <i class="fab fa-codepen fa-3x"></i></a>
                         </div>
                     </div>
                 </section>
 
 
                 <section class="project-section" id="project03">
-                        <div class="project-container">
+                    <div id="project03-container" class="project-container">
+                        <div class="project-title">
+                            <i class="fas fa-cogs"></i>
+                            <span id="project03-title">PROJECT 02</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-img-container">
+                                <img id="project03-img" class="project-img" src="./images/square-placeholder.jpg">
+                            </div>
+                            <div class="project-description-container">
+                                <div class="project-nav-btn-container">
+                                    <button onclick="projectNavLeft('project03')" class="project-nav-btn">
+                                        <i class="fas fa-arrow-left fa-3x"></i>
+                                    </button>
+                                    <button onclick="projectNavRight('project03')" class="project-nav-btn">
+                                        <i class="fas fa-arrow-right fa-3x"></i>
+                                    </button>
+                                </div>
+                                <div id="project03-description" class="project-description">
+                                <!-- DESCRIPTION HERE -->
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="project-icon-container">
+                            <a id="project03-github" class="project-link" href="#" target="_blank" title="View source code in Github">
+                                <i class="fab fa-github fa-3x"></i></a>
+                            <a id="project03-codepen" class="project-link" href="#" target="_blank" title="View full project in Codepen">
+                                <i class="fab fa-codepen fa-3x"></i></a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-section" id="project04">
+                        <div id="project04-container" class="project-container">
                             <div class="project-title">
-                                <i class="fas fa-file-code"></i>
-                                PROJECT 03
+                                <i class="fas fa-cogs"></i>
+                                <span id="project04-title">PROJECT 02</span>
                             </div>
                             <div class="project-body">
                                 <div class="project-img-container">
-                                    <img class="project-img" src="./images/square-placeholder.jpg">
+                                    <img id="project04-img" class="project-img" src="./images/square-placeholder.jpg">
                                 </div>
                                 <div class="project-description-container">
                                     <div class="project-nav-btn-container">
-                                        <button onclick="projectNavLeft('project03')" class="project-nav-btn">
+                                        <button onclick="projectNavLeft('project04')" class="project-nav-btn">
                                             <i class="fas fa-arrow-left fa-3x"></i>
                                         </button>
-                                        <button onclick="projectNavRight('project03')" class="project-nav-btn">
+                                        <button onclick="projectNavRight('project04')" class="project-nav-btn">
                                             <i class="fas fa-arrow-right fa-3x"></i>
                                         </button>
                                     </div>
-                                    <div class="project-description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum
+                                    <div id="project04-description" class="project-description">
+                                    <!-- DESCRIPTION HERE -->
                                     </div>
         
                                 </div>
                             </div>
                             <div class="project-icon-container">
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-github fa-3x"></i>
-                                </a>
-                                <a href="#" target="_blank">
-                                    <i class="fab fa-codepen fa-3x"></i>
-                                </a>
+                                <a id="project04-github" class="project-link" href="#" target="_blank" title="View source code in Github">
+                                    <i class="fab fa-github fa-3x"></i></a>
+                                <a id="project04-codepen" class="project-link" href="#" target="_blank" title="View full project in Codepen">
+                                    <i class="fab fa-codepen fa-3x"></i></a>
                             </div>
                         </div>
                     </section>
-
-
         </div>
+
+<!-- PROJECTS VIEW NAV BAR
+MAKE SURE EVERY PROJECT HAS A LIST ITEM IN THIS MENU -->
+
         <div id="projects-right">
-            <ul class="projects-menu">
-                <li>
-                    <h1>MENU</h1>
-                </li>
+            <h1>MENU</h1><br>
+            <ul id="projects-menu" class="nav-menu">
+              
                 <li>
                     <a href="#project01">
                         <i class="fas fa-folder"></i>
-                        PROJECT 01
+                        <span id="project01-menu-title">PROJECT 01</span>
                     </a>
                 </li>
                 <li>
                     <a href="#project02">
                         <i class="fas fa-folder"></i>
-                        PROJECT 02
+                        <span id="project02-menu-title">PROJECT 02</span>
                     </a>
                 </li>
                 <li>
                     <a href="#project03">
                         <i class="fas fa-folder"></i>
-                        PROJECT 03
+                        <span id="project03-menu-title">PROJECT 03</span>
                     </a>
                 </li>
+                <li>
+                        <a href="#project04">
+                            <i class="fas fa-folder"></i>
+                            <span id="project04-menu-title">PROJECT 04</span>
+                        </a>
+                    </li>
             </ul>
         </div>
     </div>
