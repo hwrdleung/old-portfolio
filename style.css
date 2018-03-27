@@ -143,8 +143,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
 }
 
-
-
 #about-left {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -154,14 +152,12 @@ h1, h2, h3, h4, h5, h6 {
 .about-square {
     width: 100%;
     height: 100%;
-    min-width: 400px;
     box-sizing: border-box;
     padding: 20px;
     display: grid;
     justify-content: center;
     align-items: center;
 }
-
 
 /* WEATHER SQUARE */
 #weather-square {
@@ -170,25 +166,22 @@ h1, h2, h3, h4, h5, h6 {
     background-position: right;
     color: rgba(255, 255, 255, 0.7);
     text-shadow: 3px 3px 10px black;
-    height: auto;
-    min-height: 300px;
+    min-height: 400px;
+    width: 100%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3rem 1fr;
+    grid-template-rows: 10% auto 20%;
+    grid-template-columns: 100%;
     grid-gap: 0;
     justify-content: center;
     align-items: center;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: row;
+    box-sizing: border-box; 
 }
 
 #current-date {
     font-size: 2.5rem;
     height: 100%;
+    width: 100%;
     grid-column-start: 1;
     grid-column-end: 3;
 }
@@ -197,22 +190,26 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-start: 1;
     grid-column-end: 3;
     max-width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
 }
+
 
 #social-links li {
     list-style-type: none;
-    padding: 20px;
+    padding: 0;
     color: #FFF;
 }
 
-#social-links li p {
+#social-links li p ,
+#social-links li a{
     font-size: 0.8rem;
-}
-
-#social-links li a {
     text-decoration: none;
     color: #FFF;
 }
@@ -221,13 +218,18 @@ h1, h2, h3, h4, h5, h6 {
     color: lightblue;
 }
 
+#clock-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 .clock {
     font-size: 3rem;
     text-decoration: none;
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     height: 100%;
 }
 
@@ -252,7 +254,6 @@ h1, h2, h3, h4, h5, h6 {
 #hawaii-temp {
     font-size: 4rem;
     display: inline-block;
-    padding: 20px;
 }
 
 #contact-square {
@@ -266,9 +267,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #email-address {
     border: 0.5rem #FFF solid;
-    padding: 20px 30px;
+    padding: 30px 0;
     margin: 0 auto;
-    max-width: 80%;
+    width: 90%;
     background: rgba(0, 255, 242, 0.5);
 }
 
@@ -532,8 +533,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     #floating-nav-btn {
-        height: 100px;
-        width: 100px;
+        height: 70px;
+        width: 70px;
+        font-size: 1rem;    
     }
 
     #projects-view,
@@ -560,22 +562,11 @@ h1, h2, h3, h4, h5, h6 {
 
     .about-square {
         height: auto;
-        width: 100%;
+        max-width: 100%;
     }
 
     .about-square:nth-child(odd){
         background: rgb(24, 24, 24);
-    }
-
-    #weather-square {
-        min-height: 600px;
-    }
-
-    #social-links {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
-        align-items: center;
     }
 
     #skillset-square {
@@ -583,18 +574,18 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     #contact-square {
-        padding-bottom: 150px;
         background-position: left;
-
+        margin: 0 auto;
     }
 
     #contact-square h1 {
         font-size: 1.6rem;
     }
 
-    #email-address {
-        width: 90%;
-    }
+    /* #email-address {
+        width: 100%;
+        margin: 0 auto;
+    } */
 
     #location-marker{
         font-size: 1rem;
