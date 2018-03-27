@@ -439,6 +439,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px;
 }
 
+.project-icon-container {
+    padding: 20px;    
+}
+
 .project-link:hover {
     color: lightblue;
 }
@@ -453,40 +457,35 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 20px;
 }
 
-.nav-menu {
-    width: 100%;
-    margin: 0; 
-    padding: 0;
-}
-
-.nav-menu li {
-    list-style-type: none;
-    width: 100%;
-    display: block;
+#projects-nav-title {
+    color: red;
     margin: 0;
-    text-align: left;
+    padding: 0;
+    line-height: 1;
 }
 
-.nav-menu li a {
-    display: block;
-    padding: 20px 0;
+#projects-nav-title-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+#projects-menu {
+    margin: 0 auto; 
     width: 100%;
-    text-decoration: none;
-    color: #FFF;
-    margin:auto;
-    font-size: 1rem;
+    text-align: center;
 }
 
-.fa-folder {
-    margin-left: 20px;
+#projects-menu a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 20px 0 ;
 }
 
-.nav-menu li a:hover {
+#projects-menu a:hover {
     background: orange;
-}
-
-.project-icon-container {
-    padding: 20px;
 }
 
 .fa-bars {
@@ -496,6 +495,9 @@ h1, h2, h3, h4, h5, h6 {
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1024px) {
 
+    /* ABOUT VIEW TABLET MODE*/
+
+    #projects-view,
     #about-view {
         grid-template-columns: 70% 30%;
     }
@@ -522,7 +524,11 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 25px;
     }
 
+    /* PROJECT VIEW TABLET MODE */
 
+    .project-title {
+        font-size: 2rem;
+    }
   }
 
 @media only screen and (max-width: 600px) {
@@ -581,11 +587,6 @@ h1, h2, h3, h4, h5, h6 {
     #contact-square h1 {
         font-size: 1.6rem;
     }
-
-    /* #email-address {
-        width: 100%;
-        margin: 0 auto;
-    } */
 
     #location-marker{
         font-size: 1rem;

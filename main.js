@@ -329,7 +329,7 @@ for(var i=0; i<allProjects.length; i++){
     //Set project names for the right nav menu
     menuId = '#' + allProjects[i] + '-menu-title';
     projectMenuTitle = document.querySelector(menuId);
-    projectMenuTitle.innerHTML = projects[allProjects[i]].name;
+    projectMenuTitle.innerHTML = '<h3>' + projects[allProjects[i]].name + '<h3>';
     //Draw correct number of circles for slide indicator
     slideIndicatorId = '#' + allProjects[i] + '-slide-indicator';
     for(var j=0; j<projects[allProjects[i]].descriptions.length; j++){
