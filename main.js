@@ -1,8 +1,5 @@
 console.log('main.js');
 
-function test(){
-    console.log('test');
-}
 
 //Squares
 var qaSquare = document.querySelector('#qa-square');
@@ -184,11 +181,18 @@ function switchViews(){
     var projectsDeg = "180deg";
     var aboutView = document.querySelector('#about-view');
 
+    var projectsNavTitleContainer = document.querySelector('#projects-nav-title-container');
+    var projectsMenu = document.querySelector('#projects-menu');
+
     if(currentView === "about"){
         projectsView.classList.remove('hide');
         currentView = "projects";
         floatingNavBtn.style.transform = "rotate(" + projectsDeg + ")";
         $('html,body').scrollTop(0);
+
+        projectsNavTitleContainer.style.display = "grid";
+        projectsMenu.style.display = "inline";
+
         var overflowTimer = setTimeout(function(){
             aboutView.classList.add('no-overflow');
         }, 500);
@@ -197,6 +201,10 @@ function switchViews(){
         projectsView.classList.add('hide');
         currentView = "about";
         floatingNavBtn.style.transform = "rotate(" + aboutDeg + ")"
+
+        projectsNavTitleContainer.style.display = "none";
+        projectsMenu.style.display = "none";
+
         var overflowTimer = setTimeout(function(){
             aboutView.classList.remove('no-overflow');
         }, 500);
@@ -404,4 +412,25 @@ function projectNavRight(project){
             $(slideIndicatorId).append(circle);
         }
     }
+}
+
+var hidden = false;
+var projectsMenu = document.querySelector('#projects-menu');
+
+function hamburger(){
+    console.log('hamburger', hidden);
+    if(hidden){
+        //remove 'hide' class from #proejcts-menu
+        projectsMenu.style.top = "0";
+        hidden = false;
+    }else if(!hidden){
+        //add 'hide' class to #projects-menu
+        projectsMenu.style.top = "-100vh";
+        hidden = true;
+    }
+}
+
+function hideMenu(){
+    projectsMenu.style.top = "-100vh";
+    hidden = true;
 }
