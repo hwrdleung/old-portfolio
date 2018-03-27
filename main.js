@@ -1,5 +1,9 @@
 console.log('main.js');
 
+function test(){
+    console.log('test');
+}
+
 //Squares
 var qaSquare = document.querySelector('#qa-square');
 var skillsetSquare = document.querySelector('#skillset-square');
@@ -183,7 +187,8 @@ function switchViews(){
     if(currentView === "about"){
         projectsView.classList.remove('hide');
         currentView = "projects";
-        floatingNavBtn.style.transform = "rotate(" + projectsDeg + ")"
+        floatingNavBtn.style.transform = "rotate(" + projectsDeg + ")";
+        $('html,body').scrollTop(0);
         var overflowTimer = setTimeout(function(){
             aboutView.classList.add('no-overflow');
         }, 500);

@@ -8,6 +8,11 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 6px;
@@ -42,6 +47,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .no-overflow {
     overflow: hidden;
+}
+
+.no-display {
+    display: none;
 }
 
 .yellow-text {
@@ -186,11 +195,10 @@ h1, h2, h3, h4, h5, h6 {
 #social-links{
     grid-column-start: 1;
     grid-column-end: 3;
+    max-width: 100%;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #social-links li {
@@ -479,12 +487,15 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
 }
 
-/* MEDIA QUERIES */
-@media only screen and (max-width: 900px) {
+.fa-bars {
+    display: none;
+}
 
-    #floating-nav-btn {
-        height: 125px;
-        width: 125px;
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1024px) {
+
+    #about-view {
+        grid-template-columns: 70% 30%;
     }
 
     #about-left {
@@ -492,18 +503,29 @@ h1, h2, h3, h4, h5, h6 {
         flex-direction: row;
         flex-wrap: wrap;
         overflow: auto;
-        height: 100vh;
     }
 
     .about-square {
-        height: auto;
-        max-height: 50%;
         width: 100%;
+        height: 500px;
     }
+
+
+    #qa-square {
+        background: rgb(14, 14, 14);
+    }
+
+    #skill-content p{
+        margin: 0;
+        padding: 0 25px;
+    }
+
+
   }
 
 @media only screen and (max-width: 600px) {
-
+    
+    /* Transition views */
     .hide {
         left: -600px;
     }
@@ -521,13 +543,17 @@ h1, h2, h3, h4, h5, h6 {
         height: auto;
     }
 
-    #about-left {
-        width: 100%;
+    /* About view */
+
+    /* profile */
+    #about-right {
+        width: 80%;
         height: auto;
     }
 
-    #about-right {
-        width: 80%;
+    /* squares */
+    #about-left {
+        width: 100%;
         height: auto;
     }
 
@@ -541,7 +567,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     #weather-square {
-        height: 600px;
+        min-height: 600px;
     }
 
     #social-links {
@@ -562,30 +588,16 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     #contact-square h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+    }
+
+    #email-address {
+        width: 90%;
     }
 
     #location-marker{
         font-size: 1rem;
     }
-
-    #projects-right {
-        position: absolute;
-        width: 100vw;
-        top: 0;
-        left: 0;
-    }
-
-    .project-title{
-        font-size: 1.3rem;
-        text-align: center;
-        background: rgb(24, 24, 24);
-    }
-
-    .project-description{
-        font-size: 1rem;
-    }
-
   }
 
 
