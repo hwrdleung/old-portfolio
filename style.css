@@ -389,6 +389,20 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
+.project-description p {
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+.project-description ul {
+    text-align: left;
+}
+
+.project-description ul li {
+    margin: 1rem auto;
+    line-height: 2rem;
+}
+
 .project-description-container {
     width: 50%;
     height: auto;
