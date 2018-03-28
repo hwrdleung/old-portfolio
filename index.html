@@ -130,7 +130,6 @@
     <div class="view hide" id="projects-view">
         <div id="projects-left">
 
-
             <section class="project-section" id="project01">
                 <div id="project01-container" class="project-container">
                     <div class="project-title">
@@ -326,6 +325,45 @@
                     </div>
                 </div>
             </section>
+
+            <section class="project-section" id="project06">
+                    <div id="project06-container" class="project-container">
+                        <div class="project-title">
+                            <i class="fas fa-cogs"></i>
+                            <span id="project06-title">PROJECT 05</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-img-container">
+                                <img id="project06-img" class="project-img" src="./images/square-placeholder.jpg">
+                            </div>
+                            <div class="project-description-container">
+                                <div class="project-nav-btn-container">
+                                    <a onclick="projectNavLeft('project06')" class="project-nav-btn">
+                                        <i class="fas fa-arrow-left fa-2x"></i>
+                                        </button>
+                                        <a onclick="projectNavRight('project06')" class="project-nav-btn">
+                                            <i class="fas fa-arrow-right fa-2x"></i>
+                                        </a>
+                                </div>
+                                <div id="project06-slide-indicator">
+                                    <!-- SLIDE INDICATOR HERE -->
+                                </div>
+                                <div id="project06-description" class="project-description">
+                                    <!-- DESCRIPTION HERE -->
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="project-icon-container">
+                            <a id="project06-github" class="project-link" href="#" target="_blank" title="View source code in Github">
+                                <i class="fab fa-github fa-3x"></i>
+                            </a>
+                            <a id="project06-codepen" class="project-link" href="#" target="_blank" title="View full project in Codepen">
+                                <i class="fab fa-codepen fa-3x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
         </div>
 
         <!-- PROJECTS VIEW NAV BAR
@@ -364,6 +402,11 @@ MAKE SURE EVERY PROJECT HAS A LIST ITEM IN THIS MENU -->
                         PROJECT 05
                     </a>
                 </li>
+                <li>
+                        <a href="#project06" onclick="hideMenu()" id="project06-menu-title">
+                            PROJECT 06
+                        </a>
+                    </li>
             </ul>
 
 

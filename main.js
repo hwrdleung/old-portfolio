@@ -234,23 +234,23 @@ var projects = {
             "./images/nitelife03.jpg",
         ],
         descriptions: [
-            "<p>Nitelife is a nightlife coordination application that allows users to pull up a list of bars in their area and quickly see which venues their friends and other users will be at tonight.  Users can also create an account and RSVP to venues themselves.  </p>" ,
+            "<p>Nitelife is a nightlife coordination application that allows users to pull up a list of bars in their area and quickly see which venues their friends and other users will be at tonight.  Users can also create an account and RSVP to venues themselves.  </p>",
 
-            "<ul>" + 
-                "<li>Nitelife has a fully functioning user registration and login system.</li>" + 
-                "<li>Registered users can see their account information, change their password, and view a list of all the bars they are attending in their user dashboard.</li>" + 
-                "<li>Nitelife remembers each user's last searched location and automatically displays bars for their area everytime they log in.</li>" + 
+            "<ul>" +
+            "<li>Nitelife has a fully functioning user registration and login system.</li>" +
+            "<li>Registered users can see their account information, change their password, and view a list of all the bars they are attending in their user dashboard.</li>" +
+            "<li>Nitelife remembers each user's last searched location and automatically displays bars for their area everytime they log in.</li>" +
             "</ul>",
 
-            "<ul>" + 
-                "<li>Nitelife's search engine is powered by Yelp, one of the most extensive and widely used business directories on the internet.</li>" + 
-                "<li>This helps to ensure that the data being displayed to users is up-to-date and pertinent.</li>" + "<li>Search results are dislayed in a simple and organized layout so that users can quickly locate the data that they need at a glance.</li>" + 
+            "<ul>" +
+            "<li>Nitelife's search engine is powered by Yelp, one of the most extensive and widely used business directories on the internet.</li>" +
+            "<li>This helps to ensure that the data being displayed to users is up-to-date and pertinent.</li>" + "<li>Search results are dislayed in a simple and organized layout so that users can quickly locate the data that they need at a glance.</li>" +
             "</ul>",
 
-            "<ul>" + 
-                "<li>Nitelife is a personal project that I created as a part of the web development curriculum on freecodecamp.org.</li>" + 
-                "<li>It's a full-stack web applicaton with basic CRUD functionality--create, read, update, and delete.</li>" + 
-                "<li>The back-end was built with NodeJS, ExpressJS, and MongoDB database, and the front-end was built with Angular.</li>" + 
+            "<ul>" +
+            "<li>Nitelife is a personal project that I created as a part of the web development curriculum on freecodecamp.org.</li>" +
+            "<li>It's a full-stack web applicaton with basic CRUD functionality--create, read, update, and delete.</li>" +
+            "<li>The back-end was built with NodeJS, ExpressJS, and MongoDB database, and the front-end was built with Angular.</li>" +
             "</ul>"
         ]
     },
@@ -289,12 +289,12 @@ var projects = {
 
         ],
         descriptions: [
-            "<p>Twitch Streamers shows the current status of Twitch streamers.  (Twitch is a website where gamers can broadcast their gameplay as a live stream).  Users can sort streamers by online streamers, offline streamers, or by all streamers.  Users can also get updated information by clicking on the 'refresh' button. Clicking on a streamer's picture brings the user to that streamer's Twitch channel.</p>",
+            "<p>This project shows the current status of Twitch streamers.  (Twitch is a website where gamers can broadcast their gameplay as a live stream).  Users can sort streamers by online streamers, offline streamers, or by all streamers.  Users can also get updated information by clicking on the 'refresh' button. Clicking on a streamer's username brings the user to that streamer's Twitch channel.</p>",
 
             "<ul>" +
-                "<li>Twitch Streamers was created with HTML, CSS, and Javascript.</li>" +
-                "<li>This project is a basic front-end app that uses JQuery to get data from Twitch's API.</li>" + 
-                "<li>It displays each streamer's channel name, online/offline status, and current stream.  </li>" +
+            "<li>Twitch Streamers was created with HTML, CSS, and Javascript.</li>" +
+            "<li>This project is a basic front-end app that uses JQuery to get data from Twitch's API.</li>" +
+            "<li>It displays each streamer's channel name, online/offline status, and current stream.  </li>" +
             "</ul>"
         ]
     },
@@ -307,7 +307,7 @@ var projects = {
             "./images/pomodoro01.jpg"
         ],
         descriptions: [
-            "This is a pomodoro clock.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+            "Description coming soon."
         ]
     },
     project06: {
@@ -319,10 +319,9 @@ var projects = {
             "./images/quotes01.jpg"
         ],
         descriptions: [
-            "This is a random quote generator that makes use of an external API."
+            "Description coming soon."
         ]
     },
-
 }
 
 //Initialize all projects to display:
@@ -359,6 +358,7 @@ for (var i = 0; i < allProjects.length; i++) {
     projectGithub = document.querySelector(githubId);
     projectCodepen = document.querySelector(codepenId);
     //Set all project DOM elements to first slide
+    console.log(projectTitle);
     projectTitle.innerHTML = projects[allProjects[i]].name;
     projectImage.src = projects[allProjects[i]].images[0];
     projectDescription.innerHTML = projects[allProjects[i]].descriptions[0];
