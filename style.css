@@ -374,6 +374,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    transition: height 1s;
 }
 
 .project-img-container {
@@ -392,15 +393,21 @@ h1, h2, h3, h4, h5, h6 {
 .project-description p {
     line-height: 2rem;
     font-size: 1rem;
+    width: 80%;
+    padding: 5px 0;
+    margin: 0 auto;
 }
 
 .project-description ul {
     text-align: left;
+    width: 80%;
+    padding: 5px 0;
+    margin: 0 auto;
 }
 
 .project-description ul li {
     margin: 1rem auto;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 
 .project-description-container {
@@ -446,6 +453,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
 }
 
+.icon-heroku,
 .project-link {
     color: #FFF;
     padding: 10px;
@@ -455,6 +463,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;    
 }
 
+.icon-heroku:hover,
 .project-link:hover {
     color: lightblue;
 }
@@ -655,6 +664,12 @@ h1, h2, h3, h4, h5, h6 {
     .project-description-container,
     .project-img-container {
         width: 100%;
+    }
+
+    .poject-description p,
+    .project-description ul {
+        width: 90%;
+        margin: 0 auto;
     }
 
   }

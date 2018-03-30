@@ -227,6 +227,7 @@ var projects = {
         currentSlide: 0,
         codepenLink: '',
         githubLink: 'https://github.com/hwrdleung/nightlife',
+        herokuLink: 'https://noodlesnitelife.herokuapp.com/',
         images: [
             "./images/nitelife01.jpg",
             "./images/nitelife02.jpg",
@@ -237,20 +238,21 @@ var projects = {
             "<p>Nitelife is a nightlife coordination application that allows users to pull up a list of bars in their area and quickly see which venues their friends and other users will be at tonight.  Users can also create an account and RSVP to venues themselves.  </p>",
 
             "<ul>" +
-            "<li>Nitelife has a fully functioning user registration and login system.</li>" +
-            "<li>Registered users can see their account information, change their password, and view a list of all the bars they are attending in their user dashboard.</li>" +
-            "<li>Nitelife remembers each user's last searched location and automatically displays bars for their area everytime they log in.</li>" +
+                "<li>Nitelife has a fully functioning user registration and login system.</li>" +
+                "<li>Registered users can see their account information, change their password, and view a list of all the bars they are attending in their user dashboard.</li>" +
+                "<li>Nitelife remembers each user's last searched location and automatically displays search results for their area the next time they log in.</li>" +
             "</ul>",
 
             "<ul>" +
-            "<li>Nitelife's search engine is powered by Yelp, one of the most extensive and widely used business directories on the internet.</li>" +
-            "<li>This helps to ensure that the data being displayed to users is up-to-date and pertinent.</li>" + "<li>Search results are dislayed in a simple and organized layout so that users can quickly locate the data that they need at a glance.</li>" +
+                "<li>Search results are provided by Yelp, one of the most extensive and widely used business directories on the internet.</li>" +
+                "<li>This helps to ensure that the data being displayed to users is up-to-date and pertinent.</li>" + 
+                "<li>Search results are dislayed in a simple and organized layout so that users can quickly locate the information that they need at a glance.</li>" +
             "</ul>",
 
             "<ul>" +
-            "<li>Nitelife is a personal project that I created as a part of the web development curriculum on freecodecamp.org.</li>" +
-            "<li>It's a full-stack web applicaton with basic CRUD functionality--create, read, update, and delete.</li>" +
-            "<li>The back-end was built with NodeJS, ExpressJS, and MongoDB database, and the front-end was built with Angular.</li>" +
+                "<li>Nitelife is a personal project that I created as a part of the web development curriculum on freecodecamp.org.</li>" +
+                "<li>It's a full-stack web applicaton with basic CRUD functionality--create, read, update, and delete.</li>" +
+                "<li>Nitelife was built with the MEAN stack.  The back-end was built with NodeJS, ExpressJS, and MongoDB database, and the front-end was built with Angular.</li>" +
             "</ul>"
         ]
     },
@@ -259,6 +261,7 @@ var projects = {
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/pen/gXaddJ',
         githubLink: '',
+        herokuLink: '',
         images: [
             "./images/calculator01.jpg"
         ],
@@ -271,11 +274,18 @@ var projects = {
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/pen/JOZxxo',
         githubLink: '',
+        herokuLink: '',
         images: [
             "./images/simon01.jpg",
+            "./images/simon01.jpg"
         ],
         descriptions: [
-            "<p>Recreate Simon is another personal coding project.  Test your memory by repeating the color sequence that Simon shows you!  Each new level adds another color to the sequence.  Be careful in strict mode--mistakes will bring you back to level 1!  Make it to level 20 to beat the game.</p><p>Simon was recreated with HTML, CSS, and Javascript.</p>",
+            "<p>Test your memory by repeating the color sequence that Simon shows you!  Each new level adds another color to the sequence.  Be careful in strict mode--mistakes will bring you back to level 1!  Make it to level 20 to beat the game.</p>",
+            
+            "<ul>" + 
+                "<li>Recreate Simon is a personal coding project that I completed as a part of the curriculum on freecodecamp.org.</li>" + 
+                "<li>I used HTML, SCSS, and Javascript for this project.</li>" +
+            "</ul>"
         ]
     },
     project04: {
@@ -283,6 +293,7 @@ var projects = {
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/pen/EbxgqB',
         githubLink: '',
+        herokuLink: '',
         images: [
             "./images/twitch01.jpg",
             "./images/twitch01.jpg"
@@ -292,9 +303,9 @@ var projects = {
             "<p>This project shows the current status of Twitch streamers.  (Twitch is a website where gamers can broadcast their gameplay as a live stream).  Users can sort streamers by online streamers, offline streamers, or by all streamers.  Users can also get updated information by clicking on the 'refresh' button. Clicking on a streamer's username brings the user to that streamer's Twitch channel.</p>",
 
             "<ul>" +
-            "<li>Twitch Streamers was created with HTML, CSS, and Javascript.</li>" +
-            "<li>This project is a basic front-end app that uses JQuery to get data from Twitch's API.</li>" +
-            "<li>It displays each streamer's channel name, online/offline status, and current stream.  </li>" +
+                "<li>Twitch Streamers was created with HTML, CSS, and Javascript.</li>" +
+                "<li>This project is a front-end web page that uses JQuery to get data from Twitch's API.</li>" +
+                "<li>It displays each streamer's channel name, online/offline status, and current stream.  </li>" +
             "</ul>"
         ]
     },
@@ -303,6 +314,7 @@ var projects = {
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/pen/qVZwJm',
         githubLink: '',
+        herokuLink: '',
         images: [
             "./images/pomodoro01.jpg"
         ],
@@ -315,6 +327,7 @@ var projects = {
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/pen/JrzoWM',
         githubLink: '',
+        herokuLink: '',
         images: [
             "./images/quotes01.jpg"
         ],
@@ -350,6 +363,7 @@ for (var i = 0; i < allProjects.length; i++) {
     titleId = '#' + allProjects[i] + '-title';
     imageId = '#' + allProjects[i] + '-img';
     descriptionId = '#' + allProjects[i] + '-description';
+    iconContainer = '#' + allProjects[i] + '-icon-container';
     githubId = '#' + allProjects[i] + '-github';
     codepenId = '#' + allProjects[i] + '-codepen';
     projectTitle = document.querySelector(titleId);
@@ -357,13 +371,14 @@ for (var i = 0; i < allProjects.length; i++) {
     projectDescription = document.querySelector(descriptionId);
     projectGithub = document.querySelector(githubId);
     projectCodepen = document.querySelector(codepenId);
+    projectIconContainer = document.querySelector(iconContainer);
     //Set all project DOM elements to first slide
     console.log(projectTitle);
     projectTitle.innerHTML = projects[allProjects[i]].name;
     projectImage.src = projects[allProjects[i]].images[0];
     projectDescription.innerHTML = projects[allProjects[i]].descriptions[0];
-    projectGithub.href = projects[allProjects[i]].githubLink;
-    projectCodepen.href = projects[allProjects[i]].codepenLink;
+    // projectGithub.href = projects[allProjects[i]].githubLink;
+    // projectCodepen.href = projects[allProjects[i]].codepenLink;
     //Set project names for the right nav menu
     menuId = '#' + allProjects[i] + '-menu-title';
     projectMenuTitle = document.querySelector(menuId);
@@ -377,6 +392,32 @@ for (var i = 0; i < allProjects.length; i++) {
             $(slideIndicatorId).append(circle);
         }
     }
+    //Check for Gihub, Codepen, and Heroku links
+    var atag =  '';
+    if(projects[allProjects[i]].githubLink){
+        //append github a tag with fontawesome icon
+        aTag = '<a id="' + allProjects[i] + '-github" class="project-link" href="' + 
+        projects[allProjects[i]].githubLink + '" target="_blank" title="View source code in Github"><i class="fab fa-github fa-3x"></i></a>';
+
+        $(iconContainer).append(aTag);
+    }
+
+    if(projects[allProjects[i]].codepenLink){
+        //append codepen a tag with fontawesome icon
+        aTag = '<a id="' + allProjects[i] + '-github" class="project-link" href="' + 
+        projects[allProjects[i]].codepenLink + '" target="_blank" title="View full project in Codepen."><i class="fab fa-codepen fa-3x"></i></a>';
+
+        $(iconContainer).append(aTag);
+    }
+
+    if(projects[allProjects[i]].herokuLink){
+        //append heroku a tag with fontawesome icon
+        aTag = '<a id="' + allProjects[i] + '-github" class="project-link" href="' + 
+        projects[allProjects[i]].herokuLink + '" target="_blank" title="View full project deployed to Heroku"><i class="icon-heroku" style="font-size: 3em;"></i></a>';
+
+        $(iconContainer).append(aTag);
+    }
+    
 }
 
 //User clicks left arrow button on a project
