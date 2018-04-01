@@ -237,15 +237,15 @@ var projects = {
         descriptions: [
             "<p>Nitelife is a nightlife coordination application that allows users to pull up a list of bars in their area and quickly see which venues their friends and other users will be at tonight.  Users can also create an account and RSVP to venues themselves.  </p>",
 
-            "<ul>" +
-                "<li>Nitelife has a fully functioning user registration and login system.</li>" +
+            '<ul>' +
+                '<li>Nitelife has a fully functioning user registration and login system.</li>' +
                 "<li>Registered users can see their account information, change their password, and view a list of all the bars they are attending in their user dashboard.</li>" +
                 "<li>Nitelife remembers each user's last searched location and automatically displays search results for their area the next time they log in.</li>" +
             "</ul>",
 
             "<ul>" +
                 "<li>Search results are provided by Yelp, one of the most extensive and widely used business directories on the internet.</li>" +
-                "<li>This helps to ensure that the data being displayed to users is up-to-date and pertinent.</li>" + 
+                "<li>Using a popular business directory helps to ensure that the data being displayed to users is up-to-date and pertinent.</li>" + 
                 "<li>Search results are dislayed in a simple and organized layout so that users can quickly locate the information that they need at a glance.</li>" +
             "</ul>",
 
@@ -257,6 +257,27 @@ var projects = {
         ]
     },
     project02: {
+        name: 'Twitch Streamers',
+        currentSlide: 0,
+        codepenLink: 'https://codepen.io/noodles01/pen/EbxgqB',
+        githubLink: '',
+        herokuLink: '',
+        images: [
+            "./images/twitch01.jpg",
+            "./images/twitch01.jpg"
+
+        ],
+        descriptions: [
+            "<p>This project shows the current status of Twitch streamers.  (Twitch is a website where gamers can broadcast their gameplay as a live stream).  Users can sort streamers by online streamers, offline streamers, or by all streamers.  Users can also get updated information by clicking on the 'refresh' button. Clicking on a streamer's username brings the user to that streamer's Twitch channel.</p>",
+
+            "<ul>" +
+                "<li>Twitch Streamers is a personal project, created with HTML, CSS, Javascript, and JQuery.</li>" +
+                "<li>This project is a front-end web page that uses JQuery to fetch data from Twitch's servers and display that data in an organized manner on the UI.</li>" +
+                "<li>It shows each streamer's channel name, channel logo,  online/offline status, and current stream.  </li>" +
+            "</ul>"
+        ]
+    },
+    project03: {
         name: 'Javascript Calculator',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/pen/gXaddJ',
@@ -266,10 +287,10 @@ var projects = {
             "./images/calculator01.jpg"
         ],
         descriptions: [
-            "<p>This was a fun personal coding project that I did as a part of the curriculum  on freecodecamp.org. It's a basic calculator that was created from scratch with HTML, CSS, and Javascript.  It has all the functionalities of your typical calculator: add, subtract, multiply, and divide.</p>"
+            "<p>This was a fun personal coding project that I did as a part of the curriculum  on freecodecamp.org. It's a basic calculator that was created from scratch with HTML, CSS, and Javascript.  It has a responsive UI that adjusts itself to fit smaller devices and all the functionalities of a typical calculator: add, subtract, multiply, divide, decimals, and negatives.</p>"
         ]
     },
-    project03: {
+    project04: {
         name: 'Recreate Simon',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/pen/JOZxxo',
@@ -288,28 +309,24 @@ var projects = {
             "</ul>"
         ]
     },
-    project04: {
-        name: 'Twitch Streamers',
+    project05: {
+        name: 'Tic Tac Toe',
         currentSlide: 0,
-        codepenLink: 'https://codepen.io/noodles01/pen/EbxgqB',
+        codepenLink: 'https://codepen.io/noodles01/pen/YExjWw',
         githubLink: '',
         herokuLink: '',
         images: [
-            "./images/twitch01.jpg",
-            "./images/twitch01.jpg"
-
+            "./images/tictactoe01.jpg"
         ],
         descriptions: [
-            "<p>This project shows the current status of Twitch streamers.  (Twitch is a website where gamers can broadcast their gameplay as a live stream).  Users can sort streamers by online streamers, offline streamers, or by all streamers.  Users can also get updated information by clicking on the 'refresh' button. Clicking on a streamer's username brings the user to that streamer's Twitch channel.</p>",
-
-            "<ul>" +
-                "<li>Twitch Streamers was created with HTML, CSS, and Javascript.</li>" +
-                "<li>This project is a front-end web page that uses JQuery to get data from Twitch's API.</li>" +
-                "<li>It displays each streamer's channel name, online/offline status, and current stream.  </li>" +
-            "</ul>"
+            "<p>Play tic tac toe against a friend, or the computer!</p>" + 
+                "<ul>" +
+                    "<li>This was a personal project created with HTML, CSS and Javascript.</li>" +
+                    "<li>It has a responsive design that allows for comfortable viewing and gameplay on mobile screen sizes as well as desktop monitors.</li>" +
+                "</ul>"
         ]
     },
-    project05: {
+    project06: {
         name: 'Pomodoro Clock',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/pen/qVZwJm',
@@ -319,22 +336,9 @@ var projects = {
             "./images/pomodoro01.jpg"
         ],
         descriptions: [
-            "Description coming soon."
+            "<p>This personal project is a Pomodoro Clock created in HTML, CSS, and Javascript.  It functions just like a pomodoro timer--25 minute sessions with 5 minute breaks in between.  It has a simple, minimalist design that's easy to use and adjusts to fit smaller screen sizes.</p>"
         ]
-    },
-    project06: {
-        name: 'Random Quote Generator',
-        currentSlide: 0,
-        codepenLink: 'https://codepen.io/noodles01/pen/JrzoWM',
-        githubLink: '',
-        herokuLink: '',
-        images: [
-            "./images/quotes01.jpg"
-        ],
-        descriptions: [
-            "Description coming soon."
-        ]
-    },
+    }
 }
 
 //Initialize all projects to display:
