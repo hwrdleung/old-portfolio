@@ -392,7 +392,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-description p {
     line-height: 2rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: 80%;
     padding: 5px 0;
     margin: 0 auto;
@@ -403,11 +403,12 @@ h1, h2, h3, h4, h5, h6 {
     width: 80%;
     padding: 5px 0;
     margin: 0 auto;
+    font-size: 1.2rem;
 }
 
 .project-description ul li {
     margin: 1rem auto;
-    line-height: 1.5rem;
+    line-height: 1.5;
 }
 
 .project-description-container {
@@ -666,9 +667,13 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
     }
 
-    .poject-description p,
     .project-description ul {
+        margin: 0 auto;
         width: 90%;
+    }
+
+    .project-description p {
+        width: 95%;
         margin: 0 auto;
     }
 

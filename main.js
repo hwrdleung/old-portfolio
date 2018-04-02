@@ -259,7 +259,7 @@ var projects = {
     project02: {
         name: 'Twitch Streamers',
         currentSlide: 0,
-        codepenLink: 'https://codepen.io/noodles01/pen/EbxgqB',
+        codepenLink: 'https://codepen.io/noodles01/full/EbxgqB/',
         githubLink: '',
         herokuLink: '',
         images: [
@@ -280,7 +280,7 @@ var projects = {
     project03: {
         name: 'Javascript Calculator',
         currentSlide: 0,
-        codepenLink: 'https://codepen.io/noodles01/pen/gXaddJ',
+        codepenLink: 'https://codepen.io/noodles01/full/gXaddJ/',
         githubLink: '',
         herokuLink: '',
         images: [
@@ -293,7 +293,7 @@ var projects = {
     project04: {
         name: 'Recreate Simon',
         currentSlide: 0,
-        codepenLink: 'https://codepen.io/noodles01/pen/JOZxxo',
+        codepenLink: 'https://codepen.io/noodles01/full/JOZxxo/',
         githubLink: '',
         herokuLink: '',
         images: [
@@ -312,7 +312,7 @@ var projects = {
     project05: {
         name: 'Tic Tac Toe',
         currentSlide: 0,
-        codepenLink: 'https://codepen.io/noodles01/pen/YExjWw',
+        codepenLink: 'https://codepen.io/noodles01/full/YExjWw/',
         githubLink: '',
         herokuLink: '',
         images: [
@@ -329,14 +329,14 @@ var projects = {
     project06: {
         name: 'Pomodoro Clock',
         currentSlide: 0,
-        codepenLink: 'https://codepen.io/noodles01/pen/qVZwJm',
+        codepenLink: 'https://codepen.io/noodles01/full/Zxoxwy/',
         githubLink: '',
         herokuLink: '',
         images: [
             "./images/pomodoro01.jpg"
         ],
         descriptions: [
-            "<p>This personal project is a Pomodoro Clock created in HTML, CSS, and Javascript.  It functions just like a pomodoro timer--25 minute sessions with 5 minute breaks in between.  It has a simple, minimalist design that's easy to use and adjusts to fit smaller screen sizes.</p>"
+            "<p>This personal project is a Pomodoro Clock created in HTML, CSS, and Javascript.  It functions just like a pomodoro timer--25 minute sessions with 5 minute breaks in between, however users can change the duration of breaks and sessions.  It has a simple design that's easy to use and adjusts to fit smaller screen sizes.</p>"
         ]
     }
 }
