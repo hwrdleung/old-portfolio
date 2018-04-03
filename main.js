@@ -1,6 +1,3 @@
-console.log('main.js');
-
-
 //Squares
 var qaSquare = document.querySelector('#qa-square');
 var skillsetSquare = document.querySelector('#skillset-square');
@@ -66,7 +63,6 @@ function getLocation() {
 function setLocalTime(position) {
     var localLatitude = position.coords.latitude;
     var localLongitude = position.coords.longitude;
-    console.log(localLatitude, localLongitude);
     //Calculate user's Local time from lat and long and display to UI
     var GOOGLE_TIME_ZONE_API_URL =
         'https://maps.googleapis.com/maps/api/timezone/json?location='
@@ -76,11 +72,7 @@ function setLocalTime(position) {
         + GOOGLE_TIME_ZONE_API_KEY
 
     $.getJSON(GOOGLE_TIME_ZONE_API_URL, function (data) {
-        console.log(data);
-        console.log(data.rawOffset);
-
         var localDate = new Date(utc + data.rawOffset);
-        console.log('localDate', localDate);
         var localHours = localDate.getHours().toString();
         var localMinutes = localDate.getMinutes().toString();
 
@@ -93,7 +85,6 @@ function setLocalTime(position) {
         }
 
         var localDisplayTime = localHours + ":" + localMinutes;
-        console.log('localDisplayTime', localDisplayTime);
         userClock.innerHTML = localDisplayTime;
     });
 
@@ -131,14 +122,6 @@ hawaiiClock.innerHTML = hawaiiDisplayTime;
 var OPENWEATHER_API_KEY = 'c348dc80fa7c6ade6308b4244680e6cd';
 var OPENWEATHER_API_URL = 'http://api.openweathermap.org/data/2.5/weather?q=aiea&id=524901&APPID='
     + OPENWEATHER_API_KEY;
-
-// $.getJSON(OPENWEATHER_API_URL, function(data){
-//     console.log(data);
-//     console.log(data.main.temp);
-//     var kelvins = data.main.temp;
-//     var fahrenheight = kelvins * (9/5) - 459.67;
-//     hawaiiTemp.innerHTML = fahrenheight.toFixed() + "&#176;F";
-// });
 
 //skill square slide transitions
 var skillIndex = 0;
@@ -336,7 +319,7 @@ var projects = {
             "./images/pomodoro01.jpg"
         ],
         descriptions: [
-            "<p>This personal project is a Pomodoro Clock created in HTML, CSS, and Javascript.  It functions just like a pomodoro timer--25 minute sessions with 5 minute breaks in between, however users can change the duration of breaks and sessions.  It has a simple design that's easy to use and adjusts to fit smaller screen sizes.</p>"
+            "<p>This personal project is a Pomodoro Clock created in HTML, CSS, and Javascript.  It functions just like a pomodoro timer--25 minute sessions with 5 minute breaks in between, however users can increase or decrease the duration of breaks and sessions.  It has a simple design that's easy to use and adjusts to fit smaller screen sizes.</p>"
         ]
     }
 }
@@ -344,7 +327,6 @@ var projects = {
 //Initialize all projects to display:
 //Projectname, its first image, and its first desciption.
 var allProjects = Object.keys(projects);
-console.log('allProjects', allProjects);
 
 var titleId;
 var imageId;
@@ -377,7 +359,6 @@ for (var i = 0; i < allProjects.length; i++) {
     projectCodepen = document.querySelector(codepenId);
     projectIconContainer = document.querySelector(iconContainer);
     //Set all project DOM elements to first slide
-    console.log(projectTitle);
     projectTitle.innerHTML = projects[allProjects[i]].name;
     projectImage.src = projects[allProjects[i]].images[0];
     projectDescription.innerHTML = projects[allProjects[i]].descriptions[0];
@@ -426,8 +407,6 @@ for (var i = 0; i < allProjects.length; i++) {
 
 //User clicks left arrow button on a project
 function projectNavLeft(project) {
-    console.log('projectNavLeft() for ', project);
-
     //Identify DOM Elements to change
     var imgId = '#' + project + '-img';
     var descriptionId = '#' + project + '-description';
@@ -459,7 +438,6 @@ function projectNavLeft(project) {
 
 //User clicks right arrow button on a project
 function projectNavRight(project) {
-    console.log('projectNavRight() for ', project);
     //Identify DOM Elements to change
     var imgId = '#' + project + '-img';
     var descriptionId = '#' + project + '-description';
@@ -493,7 +471,6 @@ var hidden = false;
 var projectsMenu = document.querySelector('#projects-menu');
 
 function hamburger() {
-    console.log('hamburger', hidden);
     if (hidden) {
         //remove 'hide' class from #proejcts-menu
         projectsMenu.style.top = "0";
