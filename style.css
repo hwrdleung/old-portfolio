@@ -11,6 +11,7 @@ body {
 a {
     text-decoration: none;
     color: #FFF;
+    font-weight: normal;
 }
 
 /* width */
@@ -28,9 +29,10 @@ a {
     background: red; 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     padding: 0;
+    font-weight: normal;
 }
 
 /* CLASSES */
@@ -43,6 +45,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #FFF;
     text-align: center;
     background: #000;
+}
+
+.secondary-font {
+    font-family: 'Century Gothic';
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: normal;
 }
 
 .no-overflow {
@@ -141,6 +150,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 2;
     color: yellow;
     font-size: 1.2rem;
+    text-align: left;
+    padding: 10px 0 0 5px;
 }
 
 #about-left {
@@ -401,6 +412,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 80%;
     padding: 5px 0;
     margin: 0 auto;
+    font-weight: normal;
 }
 
 .project-description ul {
@@ -498,8 +510,14 @@ h1, h2, h3, h4, h5, h6 {
 
 #projects-menu {
     margin: 0 auto; 
+    padding: 0;
     width: 100%;
     text-align: center;
+}
+
+#projects-menu li {
+    list-style-type: none;
+    margin: 0 auto;
 }
 
 #projects-menu a {
@@ -507,6 +525,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     width: 100%;
     padding: 20px 0 ;
+    margin: 0 auto;
 }
 
 #projects-menu a:hover {
@@ -675,11 +694,19 @@ h1, h2, h3, h4, h5, h6 {
     .project-description ul {
         margin: 0 auto;
         width: 90%;
+        line-height: 1;
+        font-size: 1rem;
     }
 
     .project-description p {
         width: 95%;
         margin: 0 auto;
+        line-height: 1.5;
+        font-size: 1rem;
+    }
+
+    #email-address h1{
+        font-size: 1.4rem;
     }
 
   }
