@@ -351,6 +351,7 @@ h1, h2, h3, h4, h5, h6, p{
 
 .project-container {
     width: 100%;
+    max-width: 1200px;
     height: auto;
     display: grid;
     grid-template-rows: auto 1fr;
@@ -358,7 +359,6 @@ h1, h2, h3, h4, h5, h6, p{
     align-items: center;
     justify-content: center;
     align-items: center;
-    /* background: red; */
 }
 
 .project-title {
@@ -694,19 +694,26 @@ h1, h2, h3, h4, h5, h6, p{
     .project-description ul {
         margin: 0 auto;
         width: 90%;
+<<<<<<< HEAD
         line-height: 1;
+=======
+>>>>>>> 99e49daa328df5430103243a63393717be8033b6
         font-size: 1rem;
     }
 
     .project-description p {
         width: 95%;
         margin: 0 auto;
+<<<<<<< HEAD
         line-height: 1.5;
         font-size: 1rem;
     }
 
     #email-address h1{
         font-size: 1.4rem;
+=======
+        font-size:1rem;
+>>>>>>> 99e49daa328df5430103243a63393717be8033b6
     }
 
   }
