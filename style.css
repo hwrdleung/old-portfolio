@@ -54,6 +54,10 @@ h1, h2, h3, h4, h5, h6, p{
     font-weight: normal;
 }
 
+.tertiary-font {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .no-overflow {
     overflow: hidden;
 }
@@ -143,7 +147,7 @@ h1, h2, h3, h4, h5, h6, p{
     height: 125px;
     width: 125px;
     border-radius: 50%;
-    margin: 20px auto;
+    margin: 30px auto;
 }
 
 #about-welcome-msg {
@@ -151,7 +155,7 @@ h1, h2, h3, h4, h5, h6, p{
     color: yellow;
     font-size: 1.2rem;
     text-align: left;
-    padding: 10px 0 0 5px;
+    padding: 25px 0 0 5px;
 }
 
 #about-left {
@@ -306,12 +310,13 @@ h1, h2, h3, h4, h5, h6, p{
 .skill-text {
     font-size: 1.3rem;
     line-height: 2;
-    padding: 0 15%;
+    padding: 20px 15%;
 }
 
 #skillset-square ul {
     margin: 0;
     padding: 0;
+    max-width: 450px;
 }
 
 #skillset-square ul li{
@@ -627,6 +632,7 @@ h1, h2, h3, h4, h5, h6, p{
     #skillset-square {
         height: 600px;
     }
+
 
     #contact-square {
         background-position: left;
