@@ -247,7 +247,7 @@ var projects = {
         herokuLink: '',
         images: [
             "./images/twitch01.jpg",
-            "./images/twitch01.jpg"
+            "./images/twitch02.jpg"
 
         ],
         descriptions: [
