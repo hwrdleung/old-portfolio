@@ -23,7 +23,9 @@ var month = [
 
 var skillContent = document.querySelector('#skill-content');
 var skillSlides = [
-    '<h2>Skillset:</h2><ul id="skills-ul"><li>HTML5</li><li>CSS3</li><li>JAVASCRIPT</li><li>JQUERY</li><li>BOOTSTRAP</li><li>NODEJS</li><li>EXPRESSJS</li><li>MONGODB</li><li>ANGULAR</li><li>GIT</li><li>GITHUB</li><li>NODEJS</li></ul>',
+    '<h2>Skillset:</h2>' + 
+        '<ul id="skills-ul">' + '<li>HTML5</li>' + '<li>CSS3</li>' + '<li>JAVASCRIPT</li>' + '<li>JQUERY</li>' + '<li>BOOTSTRAP</li>' + '<li>NODEJS</li>' + '<li>EXPRESSJS</li>' + '<li>MONGODB</li>' + '<li>ANGULAR</li>' + '<li>GIT</li>' + '<li>GITHUB</li>' + '<li>NODEJS</li>' + 
+    '</ul>',
 
     '<i class="fas fa-desktop fa-4x"></i> <i class="fas fa-mobile-alt fa-2x"></i><br><p class="skill-text">Responsive layouts automatically adjust to look great on any screen size, from mobile devices to desktop monitors.</p>',
 
@@ -83,7 +85,6 @@ function setLocalTime(position) {
         if (localMinutes.length === 1) {
             localMinutes = "0" + localMinutes;
         }
-
         var localDisplayTime = localHours + ":" + localMinutes;
         userClock.innerHTML = localDisplayTime;
     });
@@ -106,7 +107,7 @@ function setLocalTime(position) {
     });
 }
 
-//Prepend 0 if length === 1
+//Format time.  Prepend 0 if length === 1
 if (hawaiiHours.length === 1) {
     hawaiiHours = "0" + hawaiiHours;
 }
@@ -116,12 +117,6 @@ if (hawaiiMinutes.length === 1) {
 
 var hawaiiDisplayTime = hawaiiHours + ":" + hawaiiMinutes;
 hawaiiClock.innerHTML = hawaiiDisplayTime;
-
-
-//Get Aiea Weather data
-var OPENWEATHER_API_KEY = 'c348dc80fa7c6ade6308b4244680e6cd';
-var OPENWEATHER_API_URL = 'http://api.openweathermap.org/data/2.5/weather?q=aiea&id=524901&APPID='
-    + OPENWEATHER_API_KEY;
 
 //skill square slide transitions
 var skillIndex = 0;
@@ -193,16 +188,15 @@ function switchViews() {
         }, 500);
     }
 }
-
-
 // ------------------------------------------------------
 //                     PROJECTS VIEW
 // ------------------------------------------------------
 
-//projects object holds all data for all projects to be diplayed to the DOM
+//The following projects object holds all data for all projects to be diplayed to the DOM
 //Each image index corresponds to its respective descriptions index.  
 //For example: image[0] is the image for descriptions[0].
-//Changing the name here for a project will automatically change the DOM project title and menu title.
+//Changing the name here for a project will automatically change the DOM project title and nav menu title.
+//Includina a link for codepen, github, or heroku wll display its respective icon.
 
 var projects = {
     project01: {
@@ -323,17 +317,16 @@ var projects = {
         ]
     }
 }
-
 //Initialize all projects to display:
 //Projectname, its first image, and its first desciption.
 var allProjects = Object.keys(projects);
-
 var titleId;
 var imageId;
 var descriptionId;
 var githubId;
 var codepenId;
 var menuId;
+
 var projectTitle;
 var projectImage;
 var projectDescription;
@@ -341,7 +334,7 @@ var projectMenuTitle;
 
 var circle = '<i class="far fa-circle"></i>';
 var circleFilled = '<i class="fas fa-circle"></i>';
-var slideIndicatorId;
+var slideIndicatorId; //This will be unique for each project
 var slideIndicator;
 
 for (var i = 0; i < allProjects.length; i++) {
@@ -349,9 +342,10 @@ for (var i = 0; i < allProjects.length; i++) {
     titleId = '#' + allProjects[i] + '-title';
     imageId = '#' + allProjects[i] + '-img';
     descriptionId = '#' + allProjects[i] + '-description';
-    iconContainer = '#' + allProjects[i] + '-icon-container';
     githubId = '#' + allProjects[i] + '-github';
     codepenId = '#' + allProjects[i] + '-codepen';
+    iconContainer = '#' + allProjects[i] + '-icon-container';
+
     projectTitle = document.querySelector(titleId);
     projectImage = document.querySelector(imageId);
     projectDescription = document.querySelector(descriptionId);
@@ -362,8 +356,6 @@ for (var i = 0; i < allProjects.length; i++) {
     projectTitle.innerHTML = projects[allProjects[i]].name;
     projectImage.src = projects[allProjects[i]].images[0];
     projectDescription.innerHTML = projects[allProjects[i]].descriptions[0];
-    // projectGithub.href = projects[allProjects[i]].githubLink;
-    // projectCodepen.href = projects[allProjects[i]].codepenLink;
     //Set project names for the right nav menu
     menuId = '#' + allProjects[i] + '-menu-title';
     projectMenuTitle = document.querySelector(menuId);
@@ -378,7 +370,7 @@ for (var i = 0; i < allProjects.length; i++) {
         }
     }
     //Check for Gihub, Codepen, and Heroku links
-    var atag =  '';
+    var aTag =  '';
     if(projects[allProjects[i]].githubLink){
         //append github a tag with fontawesome icon
         aTag = '<a id="' + allProjects[i] + '-github" class="project-link" href="' + 
@@ -414,7 +406,7 @@ function projectNavLeft(project) {
     var projectImg = document.querySelector(imgId);
     var projectDescription = document.querySelector(descriptionId);
 
-    //Set currentSlide to correct index
+    //Change currentSlide index
     projects[project].currentSlide--;
     if (projects[project].currentSlide < 0) {
         projects[project].currentSlide = projects[project].descriptions.length - 1;
@@ -445,7 +437,7 @@ function projectNavRight(project) {
     var projectImg = document.querySelector(imgId);
     var projectDescription = document.querySelector(descriptionId);
 
-    //Set currentSlide to correct index
+    //Change currentSlide index
     projects[project].currentSlide++;
     if (projects[project].currentSlide > projects[project].descriptions.length - 1) {
         projects[project].currentSlide = 0;
@@ -472,11 +464,9 @@ var projectsMenu = document.querySelector('#projects-menu');
 
 function hamburger() {
     if (hidden) {
-        //remove 'hide' class from #proejcts-menu
         projectsMenu.style.top = "0";
         hidden = false;
     } else if (!hidden) {
-        //add 'hide' class to #projects-menu
         projectsMenu.style.top = "-100vh";
         hidden = true;
     }
