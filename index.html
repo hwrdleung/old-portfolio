@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
@@ -12,13 +11,12 @@
 <body>
     <!-- FLOATING NAV BUTTON -- BOTTOM RIGHT OF SCREEN -->
     <button id="floating-nav-btn" onclick="switchViews()">
-        <i class="fas fa-cog fa-3x"></i>
-    </button>
+        <i class="fas fa-cog fa-3x"></i></button>
 
     <!-- ABOUT VIEW -->
     <div class="view" id="about-view">
         <div id="about-left">
-            <!-- SQUARES GO HERE -->
+            <!-- SQUARES-->
             <div class="about-square" id="weather-square">
                 <div id="current-date">...</div>
                 <ul id="social-links">
@@ -63,7 +61,7 @@
                     <div class="clock">
                         <ul>
                             <li id="hawaii-clock">...</li>
-                            <li id="location-marker">
+                            <li class="location-marker">
                                 <i class="fas fa-map-marker-alt"></i>
                                 Honolulu, HI</li>
                         </ul>
@@ -71,31 +69,22 @@
                     <div class="clock">
                         <ul>
                             <li id="user-clock">...</li>
-                            <li id="location-marker">
+                            <li class="location-marker">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <span id="user-location"></span>
                             </li>
                         </ul>
                     </div>
                 </div>
-
-
-                <!-- <div class="clock" id="hawaii-clock">00:00</div>
-
-                <div class="location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    Honolulu, HI
-                </div> -->
-
             </div>
             <div class="about-square" id="skillset-square">
                 <div id="skill-content">
-                    <!-- SLIDESHOW CONTENT CONTROLLED IN main.js -->
+                    <!-- skill-content CONTENT CONTROLLED IN main.js -->
                     <i class="fas fa-cog fa-3x loader"></i>
                 </div>
             </div>
             <div class="about-square" id="qa-square">
-                <!-- Questions/answers animations -->
+                <!-- qa-square content CONTENT CONTROLLED IN main.js-->
                 <i class="fas fa-cog fa-3x loader"></i>
             </div>
             <div class="about-square" id="contact-square">
@@ -105,33 +94,25 @@
                     <h1 class="yellow-text">hwrdleung@gmail.com</h1>
                 </div>
             </div>
-
         </div>
+        <!-- ABOUT VIEW PROFILE COLUMN -->
         <div id="about-right">
-            <!-- PROFILE GOES HERE -->
-            <img id="profile-pic" src="./images/selfie.jpg">
-            <br>
-
+            <img id="profile-pic" src="./images/selfie.jpg"><br>
             <h2 id="about-name">Howard Leung</h2>
             <h3 id="about-title" class="secondary-font">Web Developer</h3>
-
             <p class="tertiary-font" id="about-welcome-msg">
-                Hello and welcome! My name is Howard and I'm a self-taught web developer from Honolulu, Hawaii. Check out some of my sample
+                Hello and welcome! My name is Howard and I'm a self-taught front-end web developer from Honolulu, Hawaii. Check out some of my sample
                 projects by clicking on the gear below!
         </div>
     </div>
-
-
+    <!-- END OF ABOUT VIEW -->
     <!-- PROJECTS VIEW -->
-    <!-- 
-    INSTRUCTIONS FOR ADDING NEW PROJECTS TO THE PROJECTS VIEW: 
+    <!-- INSTRUCTIONS FOR ADDING NEW PROJECTS TO THE PROJECTS VIEW: 
     1.  Add a new "section" to projects-left 
     2.  Add a new list item to project-menu 
     3.  In main.js, add a new project to the projects object. -->
-
     <div class="view hide" id="projects-view">
         <div id="projects-left">
-
             <section class="project-section" id="project01">
                 <div id="project01-container" class="project-container">
                     <div class="project-title">
@@ -145,22 +126,20 @@
                         <div class="project-description-container">
                             <div class="project-nav-btn-container">
                                 <a onclick="projectNavLeft('project01')" class="project-nav-btn">
-                                    <i class="fas fa-arrow-left fa-2x"></i>
-                                </a>
+                                    <i class="fas fa-arrow-left fa-2x"></i></a>
                                 <a onclick="projectNavRight('project01')" class="project-nav-btn">
-                                    <i class="fas fa-arrow-right fa-2x"></i>
-                                </a>
+                                    <i class="fas fa-arrow-right fa-2x"></i></a>
                             </div>
                             <div id="project01-slide-indicator">
-                                <!-- SLIDE INDICATOR HERE -->
+                                <!-- SLIDE INDICATOR GOES HERE. CONTROLLED IN main.js -->
                             </div>
                             <div id="project01-description" class="project-description">
-                                <!-- DESCRIPTION HERE -->
+                                <!-- DESCRIPTION HERE. CONTROLLED IN main.js-->
                             </div>
                         </div>
                     </div>
                     <div id="project01-icon-container" class="project-icon-container">
-                        <!-- PROJECT LINK ICONS HERE -->
+                        <!-- PROJECT LINK ICONS HERE. CONTROLLED IN main.js -->
                     </div>
                 </div>
             </section>
@@ -186,16 +165,16 @@
                                     </a>
                             </div>
                             <div id="project02-slide-indicator">
-                                <!-- SLIDE INDICATOR HERE -->
+                                <!-- SLIDE INDICATOR HERE. CONTROLLED IN main.js -->
                             </div>
                             <div id="project02-description" class="project-description">
-                                <!-- DESCRIPTION HERE -->
+                                <!-- DESCRIPTION HERE. CONTROLLED IN main.js -->
                             </div>
 
                         </div>
                     </div>
                     <div id="project02-icon-container" class="project-icon-container">
-                        <!-- PROJECT ICON LINKS HERE -->
+                        <!-- PROJECT ICON LINKS HERE. CONTROLLED IN main.js -->
                     </div>
                 </div>
             </section>
@@ -255,16 +234,16 @@
                                     </a>
                             </div>
                             <div id="project04-slide-indicator">
-                                <!-- SLIDE INDICATOR HERE -->
+                                <!-- SLIDE INDICATOR HERE. CONTROLLED IN main.js -->
                             </div>
                             <div id="project04-description" class="project-description">
-                                <!-- DESCRIPTION HERE -->
+                                <!-- DESCRIPTION HERE. CONTROLLED IN main.js -->
                             </div>
 
                         </div>
                     </div>
                     <div id="project04-icon-container" class="project-icon-container">
-                        <!-- PROJECT ICON LINKS HERE -->
+                        <!-- PROJECT ICON LINKS HERE. CONTROLLED IN main.js -->
                     </div>
                 </div>
             </section>
@@ -289,16 +268,16 @@
                                     </a>
                             </div>
                             <div id="project05-slide-indicator">
-                                <!-- SLIDE INDICATOR HERE -->
+                                <!-- SLIDE INDICATOR HERE.  CONTROLLED IN main.js -->
                             </div>
                             <div id="project05-description" class="project-description">
-                                <!-- DESCRIPTION HERE -->
+                                <!-- DESCRIPTION HERE.  CONTROLLED IN main.js -->
                             </div>
 
                         </div>
                     </div>
                     <div id="project05-icon-container" class="project-icon-container">
-                        <!-- PROJECT ICON LINKS HERE -->
+                        <!-- PROJECT ICON LINKS HERE.  CONTROLLED IN main.js -->
                     </div>
                 </div>
             </section>
@@ -323,32 +302,28 @@
                                         </a>
                                 </div>
                                 <div id="project06-slide-indicator">
-                                    <!-- SLIDE INDICATOR HERE -->
+                                    <!-- SLIDE INDICATOR HERE.  CONTROLLED IN main.js -->
                                 </div>
                                 <div id="project06-description" class="project-description">
-                                    <!-- DESCRIPTION HERE -->
+                                    <!-- DESCRIPTION HERE.  CONTROLLED IN main.js -->
                                 </div>
     
                             </div>
                         </div>
                         <div id="project06-icon-container" class="project-icon-container">
-                            <!-- PROJECT ICON LINKS HERE -->
+                            <!-- PROJECT ICON LINKS HERE.  CONTROLLED IN main.js -->
                         </div>
                     </div>
                 </section>
         </div>
-
         <!-- PROJECTS VIEW NAV BAR
-MAKE SURE EVERY PROJECT HAS A LIST ITEM IN THIS MENU -->
-
-
-
+            MAKE SURE EVERY PROJECT HAS A LIST ITEM IN THIS MENU -->
         <div id="projects-right">
             <div id="projects-nav-title-container">
                 <h1 id="projects-nav-title">./projects</h1>
+                <!-- HAMBURGER MENU IS ONLY DISPLAYED IN MOBILE VIEW -->
                 <a onclick="hamburger()">
-                    <i class="fas fa-bars fa-2x"></i>
-                </a>
+                    <i class="fas fa-bars fa-2x"></i></a>
             </div>
             <ul id="projects-menu" class="nav-menu secondary-font">
                 <li>
@@ -375,14 +350,11 @@ MAKE SURE EVERY PROJECT HAS A LIST ITEM IN THIS MENU -->
                     </a>
                 </li>
                 <li>
-                        <a href="#project06" onclick="hideMenu()" id="project06-menu-title">
-                            PROJECT 06
-                        </a>
-                    </li>
-                    
+                    <a href="#project06" onclick="hideMenu()" id="project06-menu-title">
+                        PROJECT 06
+                    </a>
+                </li>        
             </ul>
-
-
         </div>
     </div>
     <script src="./jquery-3.3.1.min.js"></script>

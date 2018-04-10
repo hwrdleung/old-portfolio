@@ -1,5 +1,3 @@
-
-
 body {
     background: black;
     font-family: "Helvetica", sans-serif;
@@ -14,17 +12,15 @@ a {
     font-weight: normal;
 }
 
-/* width */
+/* SCROLLBARS */
 ::-webkit-scrollbar {
     width: 6px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: rgb(24, 24, 24); 
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: red; 
 }
@@ -82,10 +78,6 @@ h1, h2, h3, h4, h5, h6, p{
     top: -100vh;
 }
 
-.debug {
-    border: 1px red solid;
-}
-
 .loader {
     animation: rotate 3s infinite;
 }
@@ -93,15 +85,6 @@ h1, h2, h3, h4, h5, h6, p{
 @keyframes rotate {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
-}
-
-/* FOR TESTING */
-.red {
-    background: red;
-}
-
-.green {
-    background: green;    
 }
 
 /* FLOATING NAV BUTTON */
@@ -112,6 +95,7 @@ h1, h2, h3, h4, h5, h6, p{
     border-radius: 50%;
     color: #FFF;
     background: #000;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,6 +153,7 @@ h1, h2, h3, h4, h5, h6, p{
     height: 100%;
     box-sizing: border-box;
     padding: 20px;
+
     display: grid;
     justify-content: center;
     align-items: center;
@@ -183,6 +168,7 @@ h1, h2, h3, h4, h5, h6, p{
     text-shadow: 3px 3px 10px black;
     min-height: 400px;
     width: 100%;
+    box-sizing: border-box; 
 
     display: grid;
     grid-template-rows: 10% auto 20%;
@@ -190,7 +176,6 @@ h1, h2, h3, h4, h5, h6, p{
     grid-gap: 0;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box; 
 }
 
 #current-date {
@@ -260,7 +245,7 @@ h1, h2, h3, h4, h5, h6, p{
     width: 100%;
 }
 
-#location-marker {
+.location-marker {
     font-size: 1.3rem;
     margin: 0;
     padding: 0;
@@ -277,7 +262,7 @@ h1, h2, h3, h4, h5, h6, p{
     background-position: left;
     display: flex;
     flex-direction: column;
-    min-height:300px;
+    min-height: 300px;
 }
 
 #email-address {
@@ -294,12 +279,11 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 /* QUESTIONS/ANSWERS SQUARE */
-#qa-square{
+#qa-square {
     font-size: 1.3rem;
     padding: 0 15%;
     min-height: 400px;
 }
-
 
 /* SKILLSET SQUARE */
 #skillset-square {
@@ -330,7 +314,6 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 /* PROJECTS VIEW */
-
 #projects-view{
     z-index: 2;
     transition: top 0.5s;
@@ -352,7 +335,6 @@ h1, h2, h3, h4, h5, h6, p{
     align-items: flex-start;
     padding: 60px 0;
 }
-
 
 .project-container {
     width: 100%;
@@ -452,6 +434,8 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .project-nav-btn {
+    width: 50px;
+    height: 50px;
     border: 5px #FFF solid;
     border-radius: 50%;
     color: #FFF;
@@ -459,8 +443,7 @@ h1, h2, h3, h4, h5, h6, p{
     outline: none;
     background: none;
     user-select: none;
-    width: 50px;
-    height: 50px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -476,14 +459,14 @@ h1, h2, h3, h4, h5, h6, p{
     line-height: 1.5;
 }
 
+.project-icon-container {
+    padding: 20px;    
+}
+
 .icon-heroku,
 .project-link {
     color: #FFF;
     padding: 10px;
-}
-
-.project-icon-container {
-    padding: 20px;    
 }
 
 .icon-heroku:hover,
@@ -492,7 +475,6 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
  /* PROJECT VIEW RIGHT VERTICAL NAV BAR */
-
 #projects-right {
     background: rgb(24, 24, 24);
     margin: 0;
@@ -541,11 +523,10 @@ h1, h2, h3, h4, h5, h6, p{
     display: none;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA QUERIES FOR RESPONSIVE LAYOUT */
 @media only screen and (max-width: 1024px) {
 
     /* ABOUT VIEW TABLET MODE*/
-
     #projects-view,
     #about-view {
         grid-template-columns: 70% 30%;
@@ -563,7 +544,6 @@ h1, h2, h3, h4, h5, h6, p{
         height: 500px;
     }
 
-
     #qa-square {
         background: rgb(14, 14, 14);
     }
@@ -574,7 +554,6 @@ h1, h2, h3, h4, h5, h6, p{
     }
 
     /* PROJECT VIEW TABLET MODE */
-
     .project-title {
         font-size: 2rem;
     }
@@ -590,6 +569,7 @@ h1, h2, h3, h4, h5, h6, p{
     /* Transition views */
     .hide {
         left: -600px;
+        transition: left 1s;
     }
 
     #floating-nav-btn {
@@ -607,6 +587,10 @@ h1, h2, h3, h4, h5, h6, p{
     }
 
     /* About view */
+    
+    #email-address h1{
+        font-size:1.3rem;
+    }
 
     /* profile */
     #about-right {
@@ -633,7 +617,6 @@ h1, h2, h3, h4, h5, h6, p{
         height: 600px;
     }
 
-
     #contact-square {
         background-position: left;
         margin: 0 auto;
@@ -643,18 +626,18 @@ h1, h2, h3, h4, h5, h6, p{
         font-size: 1.6rem;
     }
 
-    #location-marker{
+    .location-marker{
         font-size: 1rem;
     }
 
     /* PROJECT VIEW MOBILE MODE */
-
     #projects-nav-title-container {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 50px;
+
         display: grid;
         grid-template-columns: 15% 70% 15%;
         justify-content: space-between;
@@ -662,6 +645,7 @@ h1, h2, h3, h4, h5, h6, p{
         text-align: center;
         background: rgb(24, 24, 24);  
         z-index: 20; 
+        /* Make invisible so that about view is shown onload */
         display: none;
     }
 
@@ -684,7 +668,8 @@ h1, h2, h3, h4, h5, h6, p{
         z-index: 10;
         background: rgb(24, 24, 24);
         transition: top 0.5s;
-        display: none;
+        /* Make invisible so that about view is shown onload */
+        display: none; 
     }
 
     .project-title {
@@ -711,12 +696,6 @@ h1, h2, h3, h4, h5, h6, p{
         line-height: 1.5;
         font-size: 1rem;
     }
-
-    #email-address h1{
-        font-size: 1.4rem;
-        font-size:1.3rem;
-    }
-
   }
 
 
