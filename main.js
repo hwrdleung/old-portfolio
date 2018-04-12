@@ -126,7 +126,7 @@ var skillSlideShow = setInterval(function nextSkillSlide() {
     }
     skillContent.innerHTML = skillSlides[skillIndex];
     skillIndex++;
-}, 6000);
+}, 8000);
 
 //qaSquare animations
 var animationText = [
@@ -150,7 +150,7 @@ var qaSquareTimer = setInterval(function () {
     qaSquare.style.color = animationColor[currentIndex];
     qaSquare.innerHTML = "<h1>" + animationText[currentIndex] + "</h1>";
     currentIndex++;
-}, 3000);
+}, 4000);
 
 //This function handles the floating nav button by 
 //adding and removingAl the 'hide' class to/from the projects view.
@@ -212,11 +212,11 @@ var projects = {
             "./images/nitelife03.jpg",
         ],
         descriptions: [
-            "<p>Nitelife is a nightlife coordination application that allows users to pull up a list of bars in their area and quickly see which venues their friends and other users will be at tonight.  Users can also create an account and RSVP to venues themselves.  </p>",
+            "<p>Nitelife is a web application that allows users to pull up a list of bars in their area and quickly see which venues their friends and other users will be at tonight.  Users can also create an account and RSVP to venues themselves.  </p>",
 
             '<ul>' +
                 '<li>Nitelife has a fully functioning user registration and login system.</li>' +
-                "<li>Registered users can see their account information, change their password, and view a list of all the bars they are attending in their user dashboard.</li>" +
+                "<li>Registered users can see their account information, change their password, and view a list of all the bars they are attending in the user dashboard.</li>" +
                 "<li>Nitelife remembers each user's last searched location and automatically displays search results for their area the next time they log in.</li>" +
             "</ul>",
 
@@ -227,7 +227,7 @@ var projects = {
             "</ul>",
 
             "<ul>" +
-                "<li>Nitelife is a personal project that I created as a part of the web development curriculum on freecodecamp.org.</li>" +
+                "<li>Nitelife is a personal project that I created for the web development curriculum on freecodecamp.org.</li>" +
                 "<li>It's a full-stack web applicaton with basic CRUD functionality--create, read, update, and delete.</li>" +
                 "<li>Nitelife was built with the MEAN stack.  The back-end was built with NodeJS, ExpressJS, and MongoDB database, and the front-end was built with Angular.</li>" +
             "</ul>"
@@ -245,7 +245,7 @@ var projects = {
 
         ],
         descriptions: [
-            "<p>This project shows the current status of Twitch streamers.  (Twitch is a website where gamers can broadcast their gameplay as a live stream).  Users can sort streamers by online streamers, offline streamers, or by all streamers.  Users can also get updated information by clicking on the 'refresh' button. Clicking on a streamer's username brings the user to that streamer's Twitch channel.</p>",
+            "<p>This project that shows the current status of Twitch streamers.  (Twitch is a website where gamers can broadcast their gameplay as a live stream).  Users can sort streamers by online streamers, offline streamers, or by all streamers.  Users can also get updated information by clicking on the 'refresh' button. Clicking on a streamer's username opens up a new tab and directs the user to that streamer's Twitch channel.</p>",
 
             "<ul>" +
                 "<li>Twitch Streamers is a personal project, created with HTML, CSS, Javascript, and JQuery.</li>" +
@@ -264,7 +264,7 @@ var projects = {
             "./images/calculator01.jpg"
         ],
         descriptions: [
-            "<p>This was a fun personal coding project that I did as a part of the curriculum  on freecodecamp.org. It's a basic calculator that was created from scratch with HTML, CSS, and Javascript.  It has a responsive UI that adjusts itself to fit smaller devices and all the functionalities of a typical calculator: add, subtract, multiply, divide, decimals, and negatives.</p>"
+            "<p>This was a fun personal coding project that I did for the curriculum on freecodecamp.org. It's a basic calculator that was created from scratch with HTML, CSS, and Javascript.  It also has all the functionalities of a typical calculator: add, subtract, multiply, divide, decimals, and negatives.  It also has a responsive UI and adjusts itself to fit devices with smaller screen widths.  </p>"
         ]
     },
     project04: {
@@ -281,7 +281,7 @@ var projects = {
             "<p>Test your memory by repeating the color sequence that Simon shows you!  Each new level adds another color to the sequence.  Be careful in strict mode--mistakes will bring you back to level 1!  Make it to level 20 to beat the game.</p>",
             
             "<ul>" + 
-                "<li>Recreate Simon is a personal coding project that I completed as a part of the curriculum on freecodecamp.org.</li>" + 
+                "<li>Recreate Simon is a personal coding project that I completed for the curriculum on freecodecamp.org.</li>" + 
                 "<li>I used HTML, SCSS, and Javascript for this project.</li>" +
             "</ul>"
         ]
@@ -313,7 +313,7 @@ var projects = {
             "./images/pomodoro01.jpg"
         ],
         descriptions: [
-            "<p>This personal project is a Pomodoro Clock created in HTML, CSS, and Javascript.  It functions just like a pomodoro timer--25 minute sessions with 5 minute breaks in between, however users can increase or decrease the duration of breaks and sessions.  It has a simple design that's easy to use and adjusts to fit smaller screen sizes.</p>"
+            "<p>This personal project is a Pomodoro Clock created in HTML, CSS, and Javascript.  It functions just like a pomodoro timer--25 minute sessions with 5 minute breaks in between.  Users can  increase or decrease the duration of breaks and sessions as well as the alarm's volume.  It has a simple design that's easy to use and adjusts to fit smaller screen sizes.</p>"
         ]
     }
 }
