@@ -234,6 +234,23 @@ var projects = {
         ]
     },
     project02: {
+        name: 'Stock Chart',
+        currentSlide: 0,
+        codepenLink: '',
+        githubLink: 'https://github.com/hwrdleung/stocks2',
+        herokuLink: 'https://noodlestocks.herokuapp.com/',
+        images: [
+            "./images/stocks01.jpg",
+            "./images/stocks01.jpg"
+
+        ],
+        descriptions: [
+            "<p>Stock Chart is an application that allows users to view stock data in real-time along with other users.  When any user adds or removes a stock, the UI is also updated for all other users that are on the app.  Use the icons below to view the source code or to checkout the full project!</p>", 
+            
+            "<p>Stock Chart is an example of a full-stack single-page web application, which allows the UI to update without requiring the browser to refresh the page.  This results in a smooth and seamless user experience.  The front-end was built in Angular, and the back-end was built with MongoDB, Express, and NodeJS.</p>"
+        ]
+    },
+    project03: {
         name: 'Twitch Streamers',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/EbxgqB/',
@@ -254,7 +271,7 @@ var projects = {
             "</ul>"
         ]
     },
-    project03: {
+    project04: {
         name: 'Javascript Calculator',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/gXaddJ/',
@@ -267,7 +284,7 @@ var projects = {
             "<p>This was a fun personal coding project that I did for the curriculum on freecodecamp.org. It's a basic calculator that was created from scratch with HTML, CSS, and Javascript.  It also has all the functionalities of a typical calculator: add, subtract, multiply, divide, decimals, and negatives.  It also has a responsive UI and adjusts itself to fit devices with smaller screen widths.  </p>"
         ]
     },
-    project04: {
+    project05: {
         name: 'Recreate Simon',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/JOZxxo/',
@@ -286,7 +303,7 @@ var projects = {
             "</ul>"
         ]
     },
-    project05: {
+    project06: {
         name: 'Tic Tac Toe',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/YExjWw/',
@@ -303,7 +320,7 @@ var projects = {
                 "</ul>"
         ]
     },
-    project06: {
+    project07: {
         name: 'Pomodoro Clock',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/Zxoxwy/',
