@@ -274,7 +274,7 @@ var projects = {
     project04: {
         name: 'Javascript Calculator',
         currentSlide: 0,
-        codepenLink: 'https://codepen.io/noodles01/full/gXaddJ/',
+        codepenLink: 'https://codepen.io/noodles01/full/qovaLb/',
         githubLink: '',
         herokuLink: '',
         images: [
