@@ -281,7 +281,7 @@ var projects = {
             "./images/calculator01.jpg"
         ],
         descriptions: [
-            "<p>This was a fun personal coding project that I did for the curriculum on freecodecamp.org. It's a basic calculator that was created from scratch with HTML, CSS, and Javascript.  It also has all the functionalities of a typical calculator: add, subtract, multiply, divide, decimals, and negatives.  It also has a responsive UI and adjusts itself to fit devices with smaller screen widths.  </p>"
+            "<p>This was a fun personal coding project that I did for the curriculum on freecodecamp.org. It's a basic calculator that was created from scratch with HTML, CSS, and Javascript.  It has all the functionalities of a typical calculator: add, subtract, multiply, divide, decimals, and negatives.  It also has a responsive UI and adjusts itself to fit devices with smaller screen widths.  </p>"
         ]
     },
     project05: {
