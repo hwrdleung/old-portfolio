@@ -212,12 +212,12 @@ var projects = {
         ],
         descriptions: [
             `
-            <p>Gametrader is a personal project that I created as a part of the curriculum on freecodecamp.org.  It is a full stack web application that manages a video game trading club.  It was designed to connect gamers with other gamers by serving as a platform through which users can check out other users' video game collections, initiate trade requests, and post reviews on other users' public profile pages.</p>
+            <p>Gametrader is a personal project that I created as a part of the curriculum on freecodecamp.org.  It's a full stack web application that manages a video game trading club.  It was designed to connect gamers with other gamers by serving as a platform through which its users can view other users' video game collections, initiate trade requests, and post reviews on other users' public profile pages.</p>
             `,
             `
             <p>Design:</p>
             <ul>
-            <li>GameTrader features a simple and intuitive UI.</li>
+            <li>I designed the UI to be as simplistic and intuitive to use as possible.</li>
             <li>It has a responsive layout that adjusts itself to fit tablet and mobile screen sizes.</li>
             <li>A consistent color scheme is used throughout the app.</li>
             </ul>
@@ -227,7 +227,7 @@ var projects = {
             <ul>
             <li>Users can search for game titles and add them to their collections.</li>
             <li>Users can initiate trade requests with other users, who can then accept or deny the request.</li>
-            <li>All users have a public profile through which other users can view their games collection and post reviews of their trading experience.</li>
+            <li>All users have a profile which other users can view.  It showcases their video game collections as well as reviews that other users have posted.</li>
             </ul>
             `
         ]
