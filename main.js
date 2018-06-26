@@ -200,6 +200,39 @@ function switchViews() {
 
 var projects = {
     project01: {
+        name: 'GameTrader',
+        currentSlide: 0,
+        codepenLink: '',
+        githubLink: 'https://github.com/hwrdleung/gametrader',
+        herokuLink: 'https://gametrader.herokuapp.com/',
+        images: [
+            "./images/gametrader01.png",
+            "./images/gametrader02.png",
+            "./images/gametrader03.png"
+        ],
+        descriptions: [
+            `
+            <p>Gametrader is a personal project that I created as a part of the curriculum on freecodecamp.org.  It is a full stack web application that manages a video game trading club.  It was designed to connect gamers with other gamers by serving as a platform through which users can check out other users' video game collections, initiate trade requests, and post reviews on other users' public profile pages.</p>
+            `,
+            `
+            <p>Design:</p>
+            <ul>
+            <li>GameTrader features a simple and intuitive UI.</li>
+            <li>It has a responsive layout that adjusts itself to fit tablet and mobile screen sizes.</li>
+            <li>A consistent color scheme is used throughout the app.</li>
+            </ul>
+            `,
+            `
+            <p>Function:</p>
+            <ul>
+            <li>Users can search for game titles and add them to their collections.</li>
+            <li>Users can initiate trade requests with other users, who can then accept or deny the request.</li>
+            <li>All users have a public profile through which other users can view their games collection and post reviews of their trading experience.</li>
+            </ul>
+            `
+        ]
+    },
+    project02: {
         name: 'Nitelife',
         currentSlide: 0,
         codepenLink: '',
@@ -233,7 +266,7 @@ var projects = {
             "</ul>"
         ]
     },
-    project02: {
+    project03: {
         name: 'Stock Chart',
         currentSlide: 0,
         codepenLink: '',
@@ -250,7 +283,7 @@ var projects = {
             "<p>Stock Chart is an example of a full-stack single-page web application, which allows the UI to update without requiring the browser to refresh the page.  This results in a smooth and seamless user experience.  The front-end was built in Angular, and the back-end was built with MongoDB, Express, and NodeJS.</p>"
         ]
     },
-    project03: {
+    project04: {
         name: 'Twitch Streamers',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/EbxgqB/',
@@ -271,7 +304,7 @@ var projects = {
             "</ul>"
         ]
     },
-    project04: {
+    project05: {
         name: 'Javascript Calculator',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/qovaLb/',
@@ -284,7 +317,7 @@ var projects = {
             "<p>This was a fun personal coding project that I did for the curriculum on freecodecamp.org. It's a basic calculator that was created from scratch with HTML, CSS, and Javascript.  It has all the functionalities of a typical calculator: add, subtract, multiply, divide, decimals, and negatives.  It also has a responsive UI and adjusts itself to fit devices with smaller screen widths.  </p>"
         ]
     },
-    project05: {
+    project06: {
         name: 'Recreate Simon',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/JOZxxo/',
@@ -303,7 +336,7 @@ var projects = {
             "</ul>"
         ]
     },
-    project06: {
+    project07: {
         name: 'Tic Tac Toe',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/YExjWw/',
@@ -320,7 +353,7 @@ var projects = {
                 "</ul>"
         ]
     },
-    project07: {
+    project08: {
         name: 'Pomodoro Clock',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/Zxoxwy/',

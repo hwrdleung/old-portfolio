@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
@@ -11,7 +12,8 @@
 <body>
     <!-- FLOATING NAV BUTTON -- BOTTOM RIGHT OF SCREEN -->
     <button id="floating-nav-btn" onclick="switchViews()">
-        <i class="fas fa-cog fa-3x"></i></button>
+        <i class="fas fa-cog fa-3x"></i>
+    </button>
 
     <!-- ABOUT VIEW -->
     <div class="view" id="about-view">
@@ -97,12 +99,13 @@
         </div>
         <!-- ABOUT VIEW PROFILE COLUMN -->
         <div id="about-right">
-            <img id="profile-pic" src="./images/selfie.jpg"><br>
+            <img id="profile-pic" src="./images/selfie.jpg">
+            <br>
             <h2 id="about-name">Howard Leung</h2>
             <h3 id="about-title" class="secondary-font">Web Developer</h3>
             <p class="tertiary-font" id="about-welcome-msg">
-                Hello and welcome! My name is Howard and I'm a self-taught front-end web developer from Honolulu, Hawaii. Check out some of my sample
-                projects by clicking on the gear below!
+                Hello and welcome! My name is Howard and I'm a self-taught front-end web developer from Honolulu, Hawaii. Check out some
+                of my sample projects by clicking on the gear below!
         </div>
     </div>
     <!-- END OF ABOUT VIEW -->
@@ -126,9 +129,11 @@
                         <div class="project-description-container">
                             <div class="project-nav-btn-container">
                                 <a onclick="projectNavLeft('project01')" class="project-nav-btn">
-                                    <i class="fas fa-arrow-left fa-2x"></i></a>
+                                    <i class="fas fa-arrow-left fa-2x"></i>
+                                </a>
                                 <a onclick="projectNavRight('project01')" class="project-nav-btn">
-                                    <i class="fas fa-arrow-right fa-2x"></i></a>
+                                    <i class="fas fa-arrow-right fa-2x"></i>
+                                </a>
                             </div>
                             <div id="project01-slide-indicator">
                                 <!-- SLIDE INDICATOR GOES HERE. CONTROLLED IN main.js -->
@@ -283,72 +288,106 @@
             </section>
 
             <section class="project-section" id="project06">
-                    <div id="project06-container" class="project-container">
-                        <div class="project-title">
-                            <i class="fas fa-cogs"></i>
-                            <h3 class="secondary-font" id="project06-title">PROJECT 05</h3>
+                <div id="project06-container" class="project-container">
+                    <div class="project-title">
+                        <i class="fas fa-cogs"></i>
+                        <h3 class="secondary-font" id="project06-title">PROJECT 06</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-img-container">
+                            <img id="project06-img" class="project-img" src="./images/square-placeholder.jpg">
                         </div>
-                        <div class="project-body">
-                            <div class="project-img-container">
-                                <img id="project06-img" class="project-img" src="./images/square-placeholder.jpg">
+                        <div class="project-description-container">
+                            <div class="project-nav-btn-container">
+                                <a onclick="projectNavLeft('project06')" class="project-nav-btn">
+                                    <i class="fas fa-arrow-left fa-2x"></i>
+                                    </button>
+                                    <a onclick="projectNavRight('project06')" class="project-nav-btn">
+                                        <i class="fas fa-arrow-right fa-2x"></i>
+                                    </a>
                             </div>
-                            <div class="project-description-container">
-                                <div class="project-nav-btn-container">
-                                    <a onclick="projectNavLeft('project06')" class="project-nav-btn">
-                                        <i class="fas fa-arrow-left fa-2x"></i>
-                                        </button>
-                                        <a onclick="projectNavRight('project06')" class="project-nav-btn">
-                                            <i class="fas fa-arrow-right fa-2x"></i>
-                                        </a>
-                                </div>
-                                <div id="project06-slide-indicator">
-                                    <!-- SLIDE INDICATOR HERE.  CONTROLLED IN main.js -->
-                                </div>
-                                <div id="project06-description" class="project-description">
-                                    <!-- DESCRIPTION HERE.  CONTROLLED IN main.js -->
-                                </div>
-    
+                            <div id="project06-slide-indicator">
+                                <!-- SLIDE INDICATOR HERE.  CONTROLLED IN main.js -->
                             </div>
-                        </div>
-                        <div id="project06-icon-container" class="project-icon-container">
-                            <!-- PROJECT ICON LINKS HERE.  CONTROLLED IN main.js -->
+                            <div id="project06-description" class="project-description">
+                                <!-- DESCRIPTION HERE.  CONTROLLED IN main.js -->
+                            </div>
+
                         </div>
                     </div>
-                </section>
+                    <div id="project06-icon-container" class="project-icon-container">
+                        <!-- PROJECT ICON LINKS HERE.  CONTROLLED IN main.js -->
+                    </div>
+                </div>
+            </section>
 
-                <section class="project-section" id="project07">
-                        <div id="project07-container" class="project-container">
-                            <div class="project-title">
-                                <i class="fas fa-cogs"></i>
-                                <h3 class="secondary-font" id="project07-title">PROJECT 05</h3>
-                            </div>
-                            <div class="project-body">
-                                <div class="project-img-container">
-                                    <img id="project07-img" class="project-img" src="./images/square-placeholder.jpg">
-                                </div>
-                                <div class="project-description-container">
-                                    <div class="project-nav-btn-container">
-                                        <a onclick="projectNavLeft('project07')" class="project-nav-btn">
-                                            <i class="fas fa-arrow-left fa-2x"></i>
-                                            </button>
-                                            <a onclick="projectNavRight('project07')" class="project-nav-btn">
-                                                <i class="fas fa-arrow-right fa-2x"></i>
-                                            </a>
-                                    </div>
-                                    <div id="project07-slide-indicator">
-                                        <!-- SLIDE INDICATOR HERE.  CONTROLLED IN main.js -->
-                                    </div>
-                                    <div id="project07-description" class="project-description">
-                                        <!-- DESCRIPTION HERE.  CONTROLLED IN main.js -->
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <div id="project07-icon-container" class="project-icon-container">
-                                <!-- PROJECT ICON LINKS HERE.  CONTROLLED IN main.js -->
-                            </div>
+            <section class="project-section" id="project07">
+                <div id="project07-container" class="project-container">
+                    <div class="project-title">
+                        <i class="fas fa-cogs"></i>
+                        <h3 class="secondary-font" id="project07-title">PROJECT 07</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-img-container">
+                            <img id="project07-img" class="project-img" src="./images/square-placeholder.jpg">
                         </div>
-                    </section>
+                        <div class="project-description-container">
+                            <div class="project-nav-btn-container">
+                                <a onclick="projectNavLeft('project07')" class="project-nav-btn">
+                                    <i class="fas fa-arrow-left fa-2x"></i>
+                                    </button>
+                                    <a onclick="projectNavRight('project07')" class="project-nav-btn">
+                                        <i class="fas fa-arrow-right fa-2x"></i>
+                                    </a>
+                            </div>
+                            <div id="project07-slide-indicator">
+                                <!-- SLIDE INDICATOR HERE.  CONTROLLED IN main.js -->
+                            </div>
+                            <div id="project07-description" class="project-description">
+                                <!-- DESCRIPTION HERE.  CONTROLLED IN main.js -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="project07-icon-container" class="project-icon-container">
+                        <!-- PROJECT ICON LINKS HERE.  CONTROLLED IN main.js -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section" id="project08">
+                <div id="project08-container" class="project-container">
+                    <div class="project-title">
+                        <i class="fas fa-cogs"></i>
+                        <h3 class="secondary-font" id="project08-title">PROJECT 08</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-img-container">
+                            <img id="project08-img" class="project-img" src="./images/square-placeholder.jpg">
+                        </div>
+                        <div class="project-description-container">
+                            <div class="project-nav-btn-container">
+                                <a onclick="projectNavLeft('project08')" class="project-nav-btn">
+                                    <i class="fas fa-arrow-left fa-2x"></i>
+                                    </button>
+                                    <a onclick="projectNavRight('project08')" class="project-nav-btn">
+                                        <i class="fas fa-arrow-right fa-2x"></i>
+                                    </a>
+                            </div>
+                            <div id="project08-slide-indicator">
+                                <!-- SLIDE INDICATOR HERE.  CONTROLLED IN main.js -->
+                            </div>
+                            <div id="project08-description" class="project-description">
+                                <!-- DESCRIPTION HERE.  CONTROLLED IN main.js -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="project08-icon-container" class="project-icon-container">
+                        <!-- PROJECT ICON LINKS HERE.  CONTROLLED IN main.js -->
+                    </div>
+                </div>
+            </section>
         </div>
         <!-- PROJECTS VIEW NAV BAR
             MAKE SURE EVERY PROJECT HAS A LIST ITEM IN THIS MENU -->
@@ -357,7 +396,8 @@
                 <h1 id="projects-nav-title">./projects</h1>
                 <!-- HAMBURGER MENU IS ONLY DISPLAYED IN MOBILE VIEW -->
                 <a onclick="hamburger()">
-                    <i class="fas fa-bars fa-2x"></i></a>
+                    <i class="fas fa-bars fa-2x"></i>
+                </a>
             </div>
             <ul id="projects-menu" class="nav-menu secondary-font">
                 <li>
@@ -387,12 +427,17 @@
                     <a href="#project06" onclick="hideMenu()" id="project06-menu-title">
                         PROJECT 06
                     </a>
-                </li>   
+                </li>
                 <li>
-                        <a href="#project07" onclick="hideMenu()" id="project07-menu-title">
-                            PROJECT 07
-                        </a>
-                    </li>      
+                    <a href="#project07" onclick="hideMenu()" id="project07-menu-title">
+                        PROJECT 07
+                    </a>
+                </li>
+                <li>
+                    <a href="#project08" onclick="hideMenu()" id="project08-menu-title">
+                        PROJECT 08
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
