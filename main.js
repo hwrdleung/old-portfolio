@@ -203,7 +203,7 @@ var projects = {
         name: 'GameTrader',
         currentSlide: 0,
         codepenLink: '',
-        githubLink: 'https://github.com/hwrdleung/gametrader',
+        githubLink: 'https://github.com/hwrdleung/gametrade',
         herokuLink: 'https://gametrader.herokuapp.com/',
         images: [
             "./images/gametrader01.png",
