@@ -459,7 +459,19 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .project-icon-container {
-    padding: 20px;    
+    padding: 20px; 
+    display: flex;
+    flex-direction: row;   
+    justify-content: center;
+    align-items: center;
+}
+
+.project-icon-container div {
+    margin: 0 15px;
+}
+
+.project-icon-container div p {
+    margin: 10px auto;
 }
 
 .icon-heroku,

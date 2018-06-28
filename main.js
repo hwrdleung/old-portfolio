@@ -423,24 +423,24 @@ for (var i = 0; i < allProjects.length; i++) {
     var aTag =  '';
     if(projects[allProjects[i]].githubLink){
         //append github a tag with fontawesome icon
-        aTag = '<a id="' + allProjects[i] + '-github" class="project-link" href="' + 
-        projects[allProjects[i]].githubLink + '" target="_blank" title="View source code in Github"><i class="fab fa-github fa-3x"></i></a>';
+        aTag = '<div><a id="' + allProjects[i] + '-github" class="project-link" href="' + 
+        projects[allProjects[i]].githubLink + '" target="_blank" title="View source code in Github"><i class="fab fa-github fa-3x"></i></a><p>View source code</p></div>';
 
         $(iconContainer).append(aTag);
     }
 
     if(projects[allProjects[i]].codepenLink){
         //append codepen a tag with fontawesome icon
-        aTag = '<a id="' + allProjects[i] + '-github" class="project-link" href="' + 
-        projects[allProjects[i]].codepenLink + '" target="_blank" title="View full project in Codepen."><i class="fab fa-codepen fa-3x"></i></a>';
+        aTag = '<div><a id="' + allProjects[i] + '-github" class="project-link" href="' + 
+        projects[allProjects[i]].codepenLink + '" target="_blank" title="View full project in Codepen."><i class="fab fa-codepen fa-3x"></i></a><p>View full project</p></div>';
 
         $(iconContainer).append(aTag);
     }
 
     if(projects[allProjects[i]].herokuLink){
         //append heroku a tag with fontawesome icon
-        aTag = '<a id="' + allProjects[i] + '-github" class="project-link" href="' + 
-        projects[allProjects[i]].herokuLink + '" target="_blank" title="View full project deployed to Heroku"><i class="icon-heroku" style="font-size: 3em;"></i></a>';
+        aTag = '<div><a id="' + allProjects[i] + '-github" class="project-link" href="' + 
+        projects[allProjects[i]].herokuLink + '" target="_blank" title="View full project deployed to Heroku"><i class="icon-heroku" style="font-size: 3em;"></i></a><p>View full project</p></div>';
 
         $(iconContainer).append(aTag);
     }
