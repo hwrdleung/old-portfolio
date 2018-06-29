@@ -209,82 +209,27 @@ var projects = {
         images: [
             "./images/gametrader01.png",
             "./images/gametrader02.png",
+            "./images/gametrader03.png",
             "./images/gametrader03.png"
+
         ],
         descriptions: [
             `
-            <p>Gametrader is a personal project that I created as a part of the curriculum on freecodecamp.org.  It's a full stack web application that manages a video game trading club.  It was designed to connect gamers with other gamers by serving as a platform through which its users can view other users' video game collections, initiate trade requests, and post reviews on other users' public profile pages.</p>
+            <p>Gametrader is a personal project that I created to practice full-stack web development.  It's a web application that manages a mock video game trading club and was designed to connect gamers with other gamers.  Its users can view other users' video game collections, initiate trade requests, and post reviews on other users' public profile pages.</p>
             `,
             `
-            <p>Design:</p>
-            <ul>
-            <li>I designed the UI to be as simplistic and intuitive to use as possible.</li>
-            <li>It has a responsive layout that adjusts itself to fit tablet and mobile screen sizes.</li>
-            <li>A consistent color scheme is used throughout the app.</li>
-            </ul>
+            <p>Gametrader has a simple and intuitive UI that is easy to use.  Its layout is responsive and automatically adjusts itself to look and function perfectly on all devices.  The design is minimalist with a consistent theme throughout the app.  
+            </p>
             `,
             `
-            <p>Function:</p>
-            <ul>
-            <li>Users can search for game titles and add them to their collections.</li>
-            <li>Users can initiate trade requests with other users, who can then accept or deny the request.</li>
-            <li>All users have a profile which other users can view.  It showcases their video game collections as well as reviews that other users have posted.</li>
-            </ul>
+            <p>Gametrader has a fully functioning registration and login system with form validation messages, which contributes to the user experience.  Form validation messages helps the user along as the forms are being filled out while also ensuring that the data being sent to the server is formatted properly.  Once registered, users are able to edit their account information and privacy options in their account settings.</p>
+            `,
+            `
+            <p>Gametrader creates a profile page for all registered users, which displays their public user information, reviews posted by other users, and video games that they have added to their collection.  Users can view each others profile pages and initiate trade requests for games that they want to play, which can then be either accepted or denied.</p>
             `
         ]
     },
     project02: {
-        name: 'Nitelife',
-        currentSlide: 0,
-        codepenLink: '',
-        githubLink: 'https://github.com/hwrdleung/nightlife',
-        herokuLink: 'https://noodlesnitelife.herokuapp.com/',
-        images: [
-            "./images/nitelife01.jpg",
-            "./images/nitelife02.jpg",
-            "./images/nitelife03.jpg",
-            "./images/nitelife03.jpg",
-        ],
-        descriptions: [
-            "<p>Nitelife is a web application that allows users to pull up a list of bars in their area and quickly see which venues their friends and other users will be at tonight.  Users can also create an account and RSVP to venues themselves.  </p>",
-
-            '<ul>' +
-                '<li>Nitelife has a fully functioning user registration and login system.</li>' +
-                "<li>Registered users can see their account information, change their password, and view a list of all the bars they are attending in the user dashboard.</li>" +
-                "<li>Nitelife remembers each user's last searched location and automatically displays search results for their area the next time they log in.</li>" +
-            "</ul>",
-
-            "<ul>" +
-                "<li>Search results are provided by Yelp, one of the most extensive and widely used business directories on the internet.</li>" +
-                "<li>Using a popular business directory helps to ensure that the data being displayed to users is up-to-date and pertinent.</li>" + 
-                "<li>Search results are dislayed in a simple and organized layout so that users can quickly locate the information that they need at a glance.</li>" +
-            "</ul>",
-
-            "<ul>" +
-                "<li>Nitelife is a personal project that I created for the web development curriculum on freecodecamp.org.</li>" +
-                "<li>It's a full-stack web applicaton with basic CRUD functionality--create, read, update, and delete.</li>" +
-                "<li>Nitelife was built with the MEAN stack.  The back-end was built with NodeJS, ExpressJS, and MongoDB database, and the front-end was built with Angular.</li>" +
-            "</ul>"
-        ]
-    },
-    project03: {
-        name: 'Stock Chart',
-        currentSlide: 0,
-        codepenLink: '',
-        githubLink: 'https://github.com/hwrdleung/stocks2',
-        herokuLink: 'https://noodlestocks.herokuapp.com/',
-        images: [
-            "./images/stocks01.jpg",
-            "./images/stocks01.jpg"
-
-        ],
-        descriptions: [
-            "<p>Stock Chart is an application that allows users to view stock data in real-time along with other users.  When any user adds or removes a stock, the UI is also updated for all other users that are on the app.  Use the icons below to view the source code or to checkout the full project!</p>", 
-            
-            "<p>Stock Chart is an example of a full-stack single-page web application, which allows the UI to update without requiring the browser to refresh the page.  This results in a smooth and seamless user experience.  The front-end was built in Angular, and the back-end was built with MongoDB, Express, and NodeJS.</p>"
-        ]
-    },
-    project04: {
         name: 'Twitch Streamers',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/EbxgqB/',
@@ -296,16 +241,12 @@ var projects = {
 
         ],
         descriptions: [
-            "<p>This project that shows the current status of Twitch streamers.  (Twitch is a website where gamers can broadcast their gameplay as a live stream).  Users can sort streamers by online streamers, offline streamers, or by all streamers.  Users can also get updated information by clicking on the 'refresh' button. Clicking on a streamer's username opens up a new tab and directs the user to that streamer's Twitch channel.</p>",
+            `<p>Twitch Streamers is a personal project that I created for the front end web development curriculum  on freecodecamp.org.  It uses JQuery to fetch data from twitch.com's API, and displays that data in a user-friendly interface with HTML and CSS. (Twitch is a website where gamers can broadcast their gameplay as a live stream).</p>`,
 
-            "<ul>" +
-                "<li>Twitch Streamers is a personal project, created with HTML, CSS, Javascript, and JQuery.</li>" +
-                "<li>This project is a front-end web page that uses JQuery to fetch data from Twitch's servers and display that data in an organized manner on the UI.</li>" +
-                "<li>It shows each streamer's channel name, channel logo,  online/offline status, and current stream.  </li>" +
-            "</ul>"
+            `<p>The UI allows its users to sort streamers by online, offline, or both.  Users can also get updated information by clicking the 'refresh' button. Clicking on a streamer's username opens that streamer's twitch channel in a new browser tab.<p>`
         ]
     },
-    project05: {
+    project03: {
         name: 'Javascript Calculator',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/qovaLb/',
@@ -315,10 +256,10 @@ var projects = {
             "./images/calculator01.jpg"
         ],
         descriptions: [
-            "<p>This was a fun personal coding project that I did for the curriculum on freecodecamp.org. It's a basic calculator that was created from scratch with HTML, CSS, and Javascript.  It has all the functionalities of a typical calculator: add, subtract, multiply, divide, decimals, and negatives.  It also has a responsive UI and adjusts itself to fit devices with smaller screen widths.  </p>"
+            "<p>Javascript Calculator is a personal project that I created for the front end web development curriculum  on freecodecamp.org. It's a basic calculator that was created from scratch with HTML, CSS, and Javascript.  It has all the functionalities of a typical calculator: add, subtract, multiply, divide, decimals, and negatives.  It also has a responsive UI and switches into full-screen mode when viewed on a mobile device. </p>"
         ]
     },
-    project06: {
+    project04: {
         name: 'Recreate Simon',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/JOZxxo/',
@@ -329,32 +270,10 @@ var projects = {
             "./images/simon01.jpg"
         ],
         descriptions: [
-            "<p>Test your memory by repeating the color sequence that Simon shows you!  Each new level adds another color to the sequence.  Be careful in strict mode--mistakes will bring you back to level 1!  Make it to level 20 to beat the game.</p>",
-            
-            "<ul>" + 
-                "<li>Recreate Simon is a personal coding project that I completed for the curriculum on freecodecamp.org.</li>" + 
-                "<li>I used HTML, SCSS, and Javascript for this project.</li>" +
-            "</ul>"
+            `<p>Test your memory by repeating the color sequence that Simon shows you!  Each new level adds another color to the sequence.  Be careful in strict mode--mistakes will bring you back to level 1!  Make it to level 20 to beat the game.  Recreate Simon is a personal project that I created for the front end web development curriculum on freecodecamp.org.  It was coded from scratch in HTML, CSS, and Javascript.<p>`
         ]
     },
-    project07: {
-        name: 'Tic Tac Toe',
-        currentSlide: 0,
-        codepenLink: 'https://codepen.io/noodles01/full/YExjWw/',
-        githubLink: '',
-        herokuLink: '',
-        images: [
-            "./images/tictactoe01.jpg"
-        ],
-        descriptions: [
-            "<p>Play tic tac toe against a friend, or the computer!</p>" + 
-                "<ul>" +
-                    "<li>This was a personal project created with HTML, CSS and Javascript.</li>" +
-                    "<li>It has a responsive design that allows for comfortable viewing and gameplay on mobile screen sizes as well as desktop monitors.</li>" +
-                "</ul>"
-        ]
-    },
-    project08: {
+    project05: {
         name: 'Pomodoro Clock',
         currentSlide: 0,
         codepenLink: 'https://codepen.io/noodles01/full/Zxoxwy/',
@@ -364,7 +283,7 @@ var projects = {
             "./images/pomodoro01.jpg"
         ],
         descriptions: [
-            "<p>This personal project is a Pomodoro Clock created in HTML, CSS, and Javascript.  It functions just like a pomodoro timer--25 minute sessions with 5 minute breaks in between.  Users can  increase or decrease the duration of breaks and sessions as well as the alarm's volume.  It has a simple design that's easy to use and adjusts to fit smaller screen sizes.</p>"
+            "<p>Pomodoro Clock is a personal project coded from scratch in HTML, CSS, and Javascript.  It functions just like a pomodoro timer--25 minute sessions with 5 minute breaks in between sessions.  Users can change the duration of breaks and sessions with the arrow buttons, and increase or decrease the alarm's volume with the slider.</p>"
         ]
     }
 }
