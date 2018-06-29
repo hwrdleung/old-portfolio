@@ -10,6 +10,7 @@ var currentView = "about";
 //Clocks
 var userClock = document.querySelector('#user-clock');
 var hawaiiClock = document.querySelector('#hawaii-clock');
+
 var userLocation = document.querySelector('#user-location');
 //nav-btn
 var floatingNavBtn = document.querySelector('#floating-nav-btn');
@@ -153,7 +154,6 @@ var qaSquareTimer = setInterval(function () {
 }, 4000);
 
 //This function handles the floating nav button by 
-//adding and removingAl the 'hide' class to/from the projects view.
 function switchViews() {
     var aboutDeg = "0deg";
     var projectsDeg = "180deg";
@@ -192,11 +192,12 @@ function switchViews() {
 //                     PROJECTS VIEW
 // ------------------------------------------------------
 
-//The following projects object holds all data for all projects to be diplayed to the DOM
-//Each image index corresponds to its respective descriptions index.  
-//For example: image[0] is the image for descriptions[0].
-//Changing the name here for a project will automatically change the DOM project title and nav menu title.
-//Includina a link for codepen, github, or heroku wll display its respective icon.
+// The following projects object holds all data for all projects to be diplayed to the DOM
+// Each image index corresponds to its respective descriptions index.  
+// For example: image[0] is the image for descriptions[0].
+// Changing the name here for a project will automatically change the DOM project title and nav menu title.
+// Including a link for codepen, github, or heroku wll display its respective icon.
+// No icon will show if no link is provided.
 
 var projects = {
     project01: {
@@ -512,6 +513,7 @@ function projectNavRight(project) {
 var hidden = false;
 var projectsMenu = document.querySelector('#projects-menu');
 
+// Slide mobile menu into and out of view
 function hamburger() {
     if (hidden) {
         projectsMenu.style.top = "0";
