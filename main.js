@@ -207,10 +207,11 @@ var projects = {
         githubLink: 'https://github.com/hwrdleung/gametrade',
         herokuLink: 'https://gametrader.herokuapp.com/',
         images: [
-            "./images/gametrader01.png",
-            "./images/gametrader02.png",
-            "./images/gametrader03.png",
-            "./images/gametrader03.png"
+            "./images/gametrader01.jpg",
+            "./images/gametrader02.jpg",
+            "./images/gametrader03.jpg",
+            "./images/gametrader04.jpg",
+            "./images/gametrader05.jpg"
 
         ],
         descriptions: [
@@ -218,14 +219,17 @@ var projects = {
             <p>Gametrader is a personal project that I created to practice full-stack web development.  It's a web application that manages a mock video game trading club and was designed to connect gamers with other gamers.  Its users can view other users' video game collections, initiate trade requests, and post reviews on other users' public profile pages.</p>
             `,
             `
-            <p>Gametrader has a simple and intuitive UI that is easy to use.  Its layout is responsive and automatically adjusts itself to look and function perfectly on all devices.  The design is minimalist with a consistent theme throughout the app.  
+            <p>Gametrader has a simple and intuitive UI that is easy to use as well as a consistent color theme throughout the app.  Its layout is responsive and automatically adjusts itself to look and function perfectly on all devices.  For example, when viewed on small screens like mobile phones, the navigation bar converts into a dropdown menu to allow for more efficient use of the screen.    
             </p>
             `,
             `
-            <p>Gametrader has a fully functioning registration and login system with form validation messages, which contributes to the user experience.  Form validation messages helps the user along as the forms are being filled out while also ensuring that the data being sent to the server is formatted properly.  Once registered, users are able to edit their account information and privacy options in their account settings.</p>
+            <p>Gametrader has a fully functioning registration and login system with form validations.  Form validations help the user along as the forms are being filled out while ensuring that the data being sent to the server when the form is submitted is formatted properly.  Once registered, users are able to edit their account information and privacy options in their account settings.</p>
             `,
             `
-            <p>Gametrader creates a profile page for all registered users, which displays their public user information, reviews posted by other users, and video games that they have added to their collection.  Users can view each others profile pages and initiate trade requests for games that they want to play, which can then be either accepted or denied.</p>
+            <p>All users have a dashboard where they can manage all of their trade activity.  Here, users can can accept or deny incoming trade requests, view or cancel their outgoing trade requests, keep track of who they have traded their games to, and see whose games they have not yet returned.</p>
+            `,
+            `
+            <p>All users also have a profile page which displays their video game collection and reviews posted by other users.  Profile pages are only accessible to registered users.</p>
             `
         ]
     },
@@ -237,11 +241,11 @@ var projects = {
         herokuLink: '',
         images: [
             "./images/twitch01.jpg",
-            "./images/twitch02.jpg"
+            "./images/twitch01.jpg"
 
         ],
         descriptions: [
-            `<p>Twitch Streamers is a personal project that I created for the front end web development curriculum  on freecodecamp.org.  It uses JQuery to fetch data from twitch.com's API, and displays that data in a user-friendly interface with HTML and CSS. (Twitch is a website where gamers can broadcast their gameplay as a live stream).</p>`,
+            `<p>Twitch Streamers is a personal project that I created for the front end web development curriculum  on freecodecamp.org.  It uses JQuery to fetch data from twitch.com's API.  It then displays that data in a user-friendly interface with HTML and CSS. (Twitch is a website where gamers can broadcast their gameplay as a live stream).</p>`,
 
             `<p>The UI allows its users to sort streamers by online, offline, or both.  Users can also get updated information by clicking the 'refresh' button. Clicking on a streamer's username opens that streamer's twitch channel in a new browser tab.<p>`
         ]
@@ -266,7 +270,6 @@ var projects = {
         githubLink: '',
         herokuLink: '',
         images: [
-            "./images/simon01.jpg",
             "./images/simon01.jpg"
         ],
         descriptions: [
@@ -283,7 +286,7 @@ var projects = {
             "./images/pomodoro01.jpg"
         ],
         descriptions: [
-            "<p>Pomodoro Clock is a personal project coded from scratch in HTML, CSS, and Javascript.  It functions just like a pomodoro timer--25 minute sessions with 5 minute breaks in between sessions.  Users can change the duration of breaks and sessions with the arrow buttons, and increase or decrease the alarm's volume with the slider.</p>"
+            "<p>Pomodoro Clock is a personal project that was coded from scratch in HTML, CSS, and Javascript.  It functions just like a pomodoro timer--25 minute sessions with 5 minute breaks in between.  Users can change the duration of breaks and sessions with the arrow buttons, and increase or decrease the alarm's volume with the slider.</p>"
         ]
     }
 }
